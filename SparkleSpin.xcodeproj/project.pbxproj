@@ -19,6 +19,7 @@
 		064A01C6221B5AF7001AE3AF /* PoetsenOne-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 064A01C2221B5AF7001AE3AF /* PoetsenOne-Regular.otf */; };
 		064A01C7221B5AF7001AE3AF /* saxmono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 064A01C3221B5AF7001AE3AF /* saxmono.ttf */; };
 		064A01C8221B5AF7001AE3AF /* Library 3 am.otf in Resources */ = {isa = PBXBuildFile; fileRef = 064A01C4221B5AF7001AE3AF /* Library 3 am.otf */; };
+		064A01CA221B5C0E001AE3AF /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A01C9221B5C0E001AE3AF /* Font.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		064A01C2221B5AF7001AE3AF /* PoetsenOne-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PoetsenOne-Regular.otf"; path = "../../../ChoreWheel-notes/PoetsenOne-Regular.otf"; sourceTree = "<group>"; };
 		064A01C3221B5AF7001AE3AF /* saxmono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = saxmono.ttf; path = "../../../ChoreWheel-notes/saxmono.ttf"; sourceTree = "<group>"; };
 		064A01C4221B5AF7001AE3AF /* Library 3 am.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Library 3 am.otf"; path = "../../../ChoreWheel-notes/Library 3 am.otf"; sourceTree = "<group>"; };
+		064A01C9221B5C0E001AE3AF /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				064A01BD221B53AD001AE3AF /* ThemeColor.swift */,
+				064A01C9221B5C0E001AE3AF /* Font.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				064A01CA221B5C0E001AE3AF /* Font.swift in Sources */,
 				064A019D221B3BED001AE3AF /* ViewController.swift in Sources */,
 				064A019B221B3BED001AE3AF /* AppDelegate.swift in Sources */,
 				064A01BE221B53AD001AE3AF /* ThemeColor.swift in Sources */,
