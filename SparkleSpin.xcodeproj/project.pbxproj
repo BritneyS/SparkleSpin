@@ -14,7 +14,11 @@
 		064A01A5221B3BEF001AE3AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064A01A3221B3BEF001AE3AF /* LaunchScreen.storyboard */; };
 		064A01B0221B3BEF001AE3AF /* SparkleSpinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A01AF221B3BEF001AE3AF /* SparkleSpinTests.swift */; };
 		064A01BB221B4CE2001AE3AF /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 064A01BA221B4CE2001AE3AF /* Colors.xcassets */; };
-		064A01BE221B53AD001AE3AF /* ThemeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A01BD221B53AD001AE3AF /* ThemeColors.swift */; };
+		064A01BE221B53AD001AE3AF /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A01BD221B53AD001AE3AF /* ThemeColor.swift */; };
+		064A01C5221B5AF7001AE3AF /* JUICE_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 064A01C1221B5AF7001AE3AF /* JUICE_Regular.ttf */; };
+		064A01C6221B5AF7001AE3AF /* PoetsenOne-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 064A01C2221B5AF7001AE3AF /* PoetsenOne-Regular.otf */; };
+		064A01C7221B5AF7001AE3AF /* saxmono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 064A01C3221B5AF7001AE3AF /* saxmono.ttf */; };
+		064A01C8221B5AF7001AE3AF /* Library 3 am.otf in Resources */ = {isa = PBXBuildFile; fileRef = 064A01C4221B5AF7001AE3AF /* Library 3 am.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +43,11 @@
 		064A01AF221B3BEF001AE3AF /* SparkleSpinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkleSpinTests.swift; sourceTree = "<group>"; };
 		064A01B1221B3BEF001AE3AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		064A01BA221B4CE2001AE3AF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		064A01BD221B53AD001AE3AF /* ThemeColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColors.swift; sourceTree = "<group>"; };
+		064A01BD221B53AD001AE3AF /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
+		064A01C1221B5AF7001AE3AF /* JUICE_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = JUICE_Regular.ttf; path = "../../../ChoreWheel-notes/JUICE_Regular.ttf"; sourceTree = "<group>"; };
+		064A01C2221B5AF7001AE3AF /* PoetsenOne-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PoetsenOne-Regular.otf"; path = "../../../ChoreWheel-notes/PoetsenOne-Regular.otf"; sourceTree = "<group>"; };
+		064A01C3221B5AF7001AE3AF /* saxmono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = saxmono.ttf; path = "../../../ChoreWheel-notes/saxmono.ttf"; sourceTree = "<group>"; };
+		064A01C4221B5AF7001AE3AF /* Library 3 am.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Library 3 am.otf"; path = "../../../ChoreWheel-notes/Library 3 am.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 		064A0199221B3BED001AE3AF /* SparkleSpin */ = {
 			isa = PBXGroup;
 			children = (
+				064A01C0221B591A001AE3AF /* Fonts */,
 				064A01BC221B4FDC001AE3AF /* Style */,
 				064A019A221B3BED001AE3AF /* AppDelegate.swift */,
 				064A019C221B3BED001AE3AF /* ViewController.swift */,
@@ -105,9 +114,20 @@
 		064A01BC221B4FDC001AE3AF /* Style */ = {
 			isa = PBXGroup;
 			children = (
-				064A01BD221B53AD001AE3AF /* ThemeColors.swift */,
+				064A01BD221B53AD001AE3AF /* ThemeColor.swift */,
 			);
 			path = Style;
+			sourceTree = "<group>";
+		};
+		064A01C0221B591A001AE3AF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				064A01C1221B5AF7001AE3AF /* JUICE_Regular.ttf */,
+				064A01C4221B5AF7001AE3AF /* Library 3 am.otf */,
+				064A01C2221B5AF7001AE3AF /* PoetsenOne-Regular.otf */,
+				064A01C3221B5AF7001AE3AF /* saxmono.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,9 +211,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				064A01C7221B5AF7001AE3AF /* saxmono.ttf in Resources */,
+				064A01C6221B5AF7001AE3AF /* PoetsenOne-Regular.otf in Resources */,
 				064A01A5221B3BEF001AE3AF /* LaunchScreen.storyboard in Resources */,
 				064A01BB221B4CE2001AE3AF /* Colors.xcassets in Resources */,
 				064A01A2221B3BEF001AE3AF /* Assets.xcassets in Resources */,
+				064A01C8221B5AF7001AE3AF /* Library 3 am.otf in Resources */,
+				064A01C5221B5AF7001AE3AF /* JUICE_Regular.ttf in Resources */,
 				064A01A0221B3BED001AE3AF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,7 +238,7 @@
 			files = (
 				064A019D221B3BED001AE3AF /* ViewController.swift in Sources */,
 				064A019B221B3BED001AE3AF /* AppDelegate.swift in Sources */,
-				064A01BE221B53AD001AE3AF /* ThemeColors.swift in Sources */,
+				064A01BE221B53AD001AE3AF /* ThemeColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

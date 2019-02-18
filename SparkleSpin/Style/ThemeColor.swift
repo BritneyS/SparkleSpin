@@ -1,5 +1,5 @@
 //
-//  ThemeColors.swift
+//  ThemeColor.swift
 //  SparkleSpin
 //
 //  Created by Britney Smith on 2/18/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct ThemeColors {
+struct ThemeColor {
     // default
     struct Light {
         static let primaryColor = UIColor(named: "LightColor")
