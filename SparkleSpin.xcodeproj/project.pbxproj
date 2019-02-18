@@ -13,6 +13,8 @@
 		064A01A2221B3BEF001AE3AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 064A01A1221B3BEF001AE3AF /* Assets.xcassets */; };
 		064A01A5221B3BEF001AE3AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064A01A3221B3BEF001AE3AF /* LaunchScreen.storyboard */; };
 		064A01B0221B3BEF001AE3AF /* SparkleSpinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A01AF221B3BEF001AE3AF /* SparkleSpinTests.swift */; };
+		064A01BB221B4CE2001AE3AF /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 064A01BA221B4CE2001AE3AF /* Colors.xcassets */; };
+		064A01BE221B53AD001AE3AF /* ThemeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A01BD221B53AD001AE3AF /* ThemeColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		064A01AB221B3BEF001AE3AF /* SparkleSpinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SparkleSpinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		064A01AF221B3BEF001AE3AF /* SparkleSpinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkleSpinTests.swift; sourceTree = "<group>"; };
 		064A01B1221B3BEF001AE3AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		064A01BA221B4CE2001AE3AF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		064A01BD221B53AD001AE3AF /* ThemeColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +81,12 @@
 		064A0199221B3BED001AE3AF /* SparkleSpin */ = {
 			isa = PBXGroup;
 			children = (
+				064A01BC221B4FDC001AE3AF /* Style */,
 				064A019A221B3BED001AE3AF /* AppDelegate.swift */,
 				064A019C221B3BED001AE3AF /* ViewController.swift */,
 				064A019E221B3BED001AE3AF /* Main.storyboard */,
 				064A01A1221B3BEF001AE3AF /* Assets.xcassets */,
+				064A01BA221B4CE2001AE3AF /* Colors.xcassets */,
 				064A01A3221B3BEF001AE3AF /* LaunchScreen.storyboard */,
 				064A01A6221B3BEF001AE3AF /* Info.plist */,
 			);
@@ -94,6 +100,14 @@
 				064A01B1221B3BEF001AE3AF /* Info.plist */,
 			);
 			path = SparkleSpinTests;
+			sourceTree = "<group>";
+		};
+		064A01BC221B4FDC001AE3AF /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				064A01BD221B53AD001AE3AF /* ThemeColors.swift */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				064A01A5221B3BEF001AE3AF /* LaunchScreen.storyboard in Resources */,
+				064A01BB221B4CE2001AE3AF /* Colors.xcassets in Resources */,
 				064A01A2221B3BEF001AE3AF /* Assets.xcassets in Resources */,
 				064A01A0221B3BED001AE3AF /* Main.storyboard in Resources */,
 			);
@@ -199,6 +214,7 @@
 			files = (
 				064A019D221B3BED001AE3AF /* ViewController.swift in Sources */,
 				064A019B221B3BED001AE3AF /* AppDelegate.swift in Sources */,
+				064A01BE221B53AD001AE3AF /* ThemeColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
