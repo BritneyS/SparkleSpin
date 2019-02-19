@@ -20,6 +20,8 @@
 		064A01C7221B5AF7001AE3AF /* saxmono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 064A01C3221B5AF7001AE3AF /* saxmono.ttf */; };
 		064A01C8221B5AF7001AE3AF /* Library 3 am.otf in Resources */ = {isa = PBXBuildFile; fileRef = 064A01C4221B5AF7001AE3AF /* Library 3 am.otf */; };
 		064A01CA221B5C0E001AE3AF /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A01C9221B5C0E001AE3AF /* Font.swift */; };
+		064A01CC221C6388001AE3AF /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 064A01CB221C6388001AE3AF /* Icons.xcassets */; };
+		064A01CE221C77A3001AE3AF /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A01CD221C77A3001AE3AF /* Image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		064A01C3221B5AF7001AE3AF /* saxmono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = saxmono.ttf; path = "../../../ChoreWheel-notes/saxmono.ttf"; sourceTree = "<group>"; };
 		064A01C4221B5AF7001AE3AF /* Library 3 am.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Library 3 am.otf"; path = "../../../ChoreWheel-notes/Library 3 am.otf"; sourceTree = "<group>"; };
 		064A01C9221B5C0E001AE3AF /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		064A01CB221C6388001AE3AF /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		064A01CD221C77A3001AE3AF /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 				064A019E221B3BED001AE3AF /* Main.storyboard */,
 				064A01A1221B3BEF001AE3AF /* Assets.xcassets */,
 				064A01BA221B4CE2001AE3AF /* Colors.xcassets */,
+				064A01CB221C6388001AE3AF /* Icons.xcassets */,
 				064A01A3221B3BEF001AE3AF /* LaunchScreen.storyboard */,
 				064A01A6221B3BEF001AE3AF /* Info.plist */,
 			);
@@ -118,6 +123,7 @@
 			children = (
 				064A01BD221B53AD001AE3AF /* ThemeColor.swift */,
 				064A01C9221B5C0E001AE3AF /* Font.swift */,
+				064A01CD221C77A3001AE3AF /* Image.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -215,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				064A01C7221B5AF7001AE3AF /* saxmono.ttf in Resources */,
+				064A01CC221C6388001AE3AF /* Icons.xcassets in Resources */,
 				064A01C6221B5AF7001AE3AF /* PoetsenOne-Regular.otf in Resources */,
 				064A01A5221B3BEF001AE3AF /* LaunchScreen.storyboard in Resources */,
 				064A01BB221B4CE2001AE3AF /* Colors.xcassets in Resources */,
@@ -243,6 +250,7 @@
 				064A019D221B3BED001AE3AF /* ViewController.swift in Sources */,
 				064A019B221B3BED001AE3AF /* AppDelegate.swift in Sources */,
 				064A01BE221B53AD001AE3AF /* ThemeColor.swift in Sources */,
+				064A01CE221C77A3001AE3AF /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
