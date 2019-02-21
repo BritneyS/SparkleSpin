@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient-background" translatesAutoresizingMaskIntoConstraints="NO" id="ZGf-3x-Sdk">
-                                <rect key="frame" x="0.0" y="-72.5" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-composite-light" translatesAutoresizingMaskIntoConstraints="NO" id="mZr-ta-2Z3">
                                 <rect key="frame" x="28" y="233" width="319" height="201"/>
@@ -34,7 +34,11 @@
                             <constraint firstItem="mZr-ta-2Z3" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="3F6-Fd-ak8"/>
                             <constraint firstItem="mZr-ta-2Z3" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="6f8-Wz-nsA"/>
                             <constraint firstItem="ZGf-3x-Sdk" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="RcF-pO-vRT"/>
+                            <constraint firstAttribute="bottom" secondItem="ZGf-3x-Sdk" secondAttribute="bottom" id="dEn-ac-umb"/>
+                            <constraint firstItem="ZGf-3x-Sdk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hyV-g6-Zs6"/>
                             <constraint firstItem="ZGf-3x-Sdk" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="kTL-5Q-ku4"/>
+                            <constraint firstItem="ZGf-3x-Sdk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="syA-f1-R1k"/>
+                            <constraint firstItem="ZGf-3x-Sdk" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="uh7-vl-hLt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
