@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060C4D11221F425600B0BB07 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 060C4D10221F425600B0BB07 /* Images.xcassets */; };
 		064A019B221B3BED001AE3AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A019A221B3BED001AE3AF /* AppDelegate.swift */; };
 		064A019D221B3BED001AE3AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A019C221B3BED001AE3AF /* ViewController.swift */; };
 		064A01A0221B3BED001AE3AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064A019E221B3BED001AE3AF /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		060C4D10221F425600B0BB07 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		064A0197221B3BED001AE3AF /* SparkleSpin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SparkleSpin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		064A019A221B3BED001AE3AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		064A019C221B3BED001AE3AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				064A01A1221B3BEF001AE3AF /* Assets.xcassets */,
 				064A01A3221B3BEF001AE3AF /* LaunchScreen.storyboard */,
 				064A01A6221B3BEF001AE3AF /* Info.plist */,
+				060C4D10221F425600B0BB07 /* Images.xcassets */,
 			);
 			path = SparkleSpin;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				064A01A5221B3BEF001AE3AF /* LaunchScreen.storyboard in Resources */,
+				060C4D11221F425600B0BB07 /* Images.xcassets in Resources */,
 				064A01A2221B3BEF001AE3AF /* Assets.xcassets in Resources */,
 				064A01A0221B3BED001AE3AF /* Main.storyboard in Resources */,
 			);

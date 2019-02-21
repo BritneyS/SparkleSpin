@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +17,25 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient-background" translatesAutoresizingMaskIntoConstraints="NO" id="ZGf-3x-Sdk">
+                                <rect key="frame" x="0.0" y="-72.5" width="375" height="812"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-composite-light" translatesAutoresizingMaskIntoConstraints="NO" id="mZr-ta-2Z3">
+                                <rect key="frame" x="28" y="233" width="319" height="201"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="201" id="CKj-xs-AyT"/>
+                                    <constraint firstAttribute="width" constant="319" id="DHo-Ik-MdE"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mZr-ta-2Z3" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="3F6-Fd-ak8"/>
+                            <constraint firstItem="mZr-ta-2Z3" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="6f8-Wz-nsA"/>
+                            <constraint firstItem="ZGf-3x-Sdk" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="RcF-pO-vRT"/>
+                            <constraint firstItem="ZGf-3x-Sdk" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="kTL-5Q-ku4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -22,4 +44,8 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gradient-background" width="375" height="812"/>
+        <image name="logo-composite-light" width="319" height="201"/>
+    </resources>
 </document>
