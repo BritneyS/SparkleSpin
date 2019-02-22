@@ -18,6 +18,13 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Library 3 am.otf</string>
+		<string>PoetsenOne-Regular.otf</string>
+		<string>saxmono.ttf</string>
+		<string>JUICE_Regular.ttf</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
