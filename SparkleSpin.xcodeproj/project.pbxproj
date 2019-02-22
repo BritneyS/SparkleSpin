@@ -47,10 +47,10 @@
 		064A01B1221B3BEF001AE3AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		064A01BA221B4CE2001AE3AF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		064A01BD221B53AD001AE3AF /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
-		064A01C1221B5AF7001AE3AF /* JUICE_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = JUICE_Regular.ttf; path = "../../../ChoreWheel-notes/JUICE_Regular.ttf"; sourceTree = "<group>"; };
-		064A01C2221B5AF7001AE3AF /* PoetsenOne-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PoetsenOne-Regular.otf"; path = "../../../ChoreWheel-notes/PoetsenOne-Regular.otf"; sourceTree = "<group>"; };
-		064A01C3221B5AF7001AE3AF /* saxmono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = saxmono.ttf; path = "../../../ChoreWheel-notes/saxmono.ttf"; sourceTree = "<group>"; };
-		064A01C4221B5AF7001AE3AF /* Library 3 am.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Library 3 am.otf"; path = "../../../ChoreWheel-notes/Library 3 am.otf"; sourceTree = "<group>"; };
+		064A01C1221B5AF7001AE3AF /* JUICE_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JUICE_Regular.ttf; sourceTree = "<group>"; };
+		064A01C2221B5AF7001AE3AF /* PoetsenOne-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoetsenOne-Regular.otf"; sourceTree = "<group>"; };
+		064A01C3221B5AF7001AE3AF /* saxmono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = saxmono.ttf; sourceTree = "<group>"; };
+		064A01C4221B5AF7001AE3AF /* Library 3 am.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Library 3 am.otf"; sourceTree = "<group>"; };
 		064A01C9221B5C0E001AE3AF /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		064A01CB221C6388001AE3AF /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		064A01CD221C77A3001AE3AF /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
