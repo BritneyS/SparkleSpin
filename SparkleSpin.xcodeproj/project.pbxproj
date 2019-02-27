@@ -12,12 +12,14 @@
 		060C4D15222047BA00B0BB07 /* Library 3 am.otf in Resources */ = {isa = PBXBuildFile; fileRef = 060C4D14222047BA00B0BB07 /* Library 3 am.otf */; };
 		060C4D17222047C500B0BB07 /* PoetsenOne-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 060C4D16222047C500B0BB07 /* PoetsenOne-Regular.otf */; };
 		060C4D19222047D100B0BB07 /* saxmono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 060C4D18222047D100B0BB07 /* saxmono.ttf */; };
+		060C4D1C222710C100B0BB07 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060C4D1B222710C100B0BB07 /* PlayerModel.swift */; };
+		060C4D1F22271E6800B0BB07 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060C4D1E22271E6800B0BB07 /* PlayerViewModel.swift */; };
 		064A019B221B3BED001AE3AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A019A221B3BED001AE3AF /* AppDelegate.swift */; };
 		064A019D221B3BED001AE3AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A019C221B3BED001AE3AF /* ViewController.swift */; };
 		064A01A0221B3BED001AE3AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064A019E221B3BED001AE3AF /* Main.storyboard */; };
 		064A01A2221B3BEF001AE3AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 064A01A1221B3BEF001AE3AF /* Assets.xcassets */; };
 		064A01A5221B3BEF001AE3AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064A01A3221B3BEF001AE3AF /* LaunchScreen.storyboard */; };
-		064A01B0221B3BEF001AE3AF /* SparkleSpinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A01AF221B3BEF001AE3AF /* SparkleSpinTests.swift */; };
+		064A01B0221B3BEF001AE3AF /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A01AF221B3BEF001AE3AF /* ModelTests.swift */; };
 		064A01BB221B4CE2001AE3AF /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 064A01BA221B4CE2001AE3AF /* Colors.xcassets */; };
 		064A01BE221B53AD001AE3AF /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A01BD221B53AD001AE3AF /* ThemeColor.swift */; };
 		064A01CA221B5C0E001AE3AF /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A01C9221B5C0E001AE3AF /* Font.swift */; };
@@ -41,6 +43,8 @@
 		060C4D14222047BA00B0BB07 /* Library 3 am.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Library 3 am.otf"; sourceTree = "<group>"; };
 		060C4D16222047C500B0BB07 /* PoetsenOne-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoetsenOne-Regular.otf"; sourceTree = "<group>"; };
 		060C4D18222047D100B0BB07 /* saxmono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = saxmono.ttf; sourceTree = "<group>"; };
+		060C4D1B222710C100B0BB07 /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		060C4D1E22271E6800B0BB07 /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
 		064A0197221B3BED001AE3AF /* SparkleSpin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SparkleSpin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		064A019A221B3BED001AE3AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		064A019C221B3BED001AE3AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +53,7 @@
 		064A01A4221B3BEF001AE3AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		064A01A6221B3BEF001AE3AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		064A01AB221B3BEF001AE3AF /* SparkleSpinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SparkleSpinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		064A01AF221B3BEF001AE3AF /* SparkleSpinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkleSpinTests.swift; sourceTree = "<group>"; };
+		064A01AF221B3BEF001AE3AF /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		064A01B1221B3BEF001AE3AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		064A01BA221B4CE2001AE3AF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		064A01BD221B53AD001AE3AF /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
@@ -76,6 +80,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		060C4D1A2227107C00B0BB07 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				060C4D1B222710C100B0BB07 /* PlayerModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		060C4D1D22271E3E00B0BB07 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				060C4D1E22271E6800B0BB07 /* PlayerViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
 		064A018E221B3BED001AE3AF = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +117,8 @@
 		064A0199221B3BED001AE3AF /* SparkleSpin */ = {
 			isa = PBXGroup;
 			children = (
+				060C4D1D22271E3E00B0BB07 /* ViewModels */,
+				060C4D1A2227107C00B0BB07 /* Models */,
 				064A01C0221B591A001AE3AF /* Fonts */,
 				064A01BC221B4FDC001AE3AF /* Style */,
 				064A019A221B3BED001AE3AF /* AppDelegate.swift */,
@@ -115,7 +137,7 @@
 		064A01AE221B3BEF001AE3AF /* SparkleSpinTests */ = {
 			isa = PBXGroup;
 			children = (
-				064A01AF221B3BEF001AE3AF /* SparkleSpinTests.swift */,
+				064A01AF221B3BEF001AE3AF /* ModelTests.swift */,
 				064A01B1221B3BEF001AE3AF /* Info.plist */,
 			);
 			path = SparkleSpinTests;
@@ -254,6 +276,8 @@
 				064A019D221B3BED001AE3AF /* ViewController.swift in Sources */,
 				064A019B221B3BED001AE3AF /* AppDelegate.swift in Sources */,
 				064A01BE221B53AD001AE3AF /* ThemeColor.swift in Sources */,
+				060C4D1C222710C100B0BB07 /* PlayerModel.swift in Sources */,
+				060C4D1F22271E6800B0BB07 /* PlayerViewModel.swift in Sources */,
 				064A01CE221C77A3001AE3AF /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,7 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				064A01B0221B3BEF001AE3AF /* SparkleSpinTests.swift in Sources */,
+				064A01B0221B3BEF001AE3AF /* ModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
