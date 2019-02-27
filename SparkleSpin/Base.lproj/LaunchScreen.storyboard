@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient-background" translatesAutoresizingMaskIntoConstraints="NO" id="ZGf-3x-Sdk">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient-background-two" translatesAutoresizingMaskIntoConstraints="NO" id="ZGf-3x-Sdk">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-composite-light" translatesAutoresizingMaskIntoConstraints="NO" id="mZr-ta-2Z3">
@@ -49,7 +49,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="gradient-background" width="375" height="812"/>
+        <image name="gradient-background-two" width="375" height="812"/>
         <image name="logo-composite-light" width="319" height="201"/>
     </resources>
 </document>
