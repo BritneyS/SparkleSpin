@@ -14,6 +14,8 @@
 		060C4D19222047D100B0BB07 /* saxmono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 060C4D18222047D100B0BB07 /* saxmono.ttf */; };
 		060C4D1C222710C100B0BB07 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060C4D1B222710C100B0BB07 /* PlayerModel.swift */; };
 		060C4D1F22271E6800B0BB07 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060C4D1E22271E6800B0BB07 /* PlayerViewModel.swift */; };
+		060C4D21222754D400B0BB07 /* ChoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060C4D20222754D400B0BB07 /* ChoreModel.swift */; };
+		060C4D232227556600B0BB07 /* ChoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060C4D222227556600B0BB07 /* ChoreViewModel.swift */; };
 		064A019B221B3BED001AE3AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A019A221B3BED001AE3AF /* AppDelegate.swift */; };
 		064A019D221B3BED001AE3AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A019C221B3BED001AE3AF /* ViewController.swift */; };
 		064A01A0221B3BED001AE3AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064A019E221B3BED001AE3AF /* Main.storyboard */; };
@@ -45,6 +47,8 @@
 		060C4D18222047D100B0BB07 /* saxmono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = saxmono.ttf; sourceTree = "<group>"; };
 		060C4D1B222710C100B0BB07 /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		060C4D1E22271E6800B0BB07 /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
+		060C4D20222754D400B0BB07 /* ChoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreModel.swift; sourceTree = "<group>"; };
+		060C4D222227556600B0BB07 /* ChoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreViewModel.swift; sourceTree = "<group>"; };
 		064A0197221B3BED001AE3AF /* SparkleSpin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SparkleSpin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		064A019A221B3BED001AE3AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		064A019C221B3BED001AE3AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				060C4D1B222710C100B0BB07 /* PlayerModel.swift */,
+				060C4D20222754D400B0BB07 /* ChoreModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -92,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				060C4D1E22271E6800B0BB07 /* PlayerViewModel.swift */,
+				060C4D222227556600B0BB07 /* ChoreViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -275,8 +281,10 @@
 				064A01CA221B5C0E001AE3AF /* Font.swift in Sources */,
 				064A019D221B3BED001AE3AF /* ViewController.swift in Sources */,
 				064A019B221B3BED001AE3AF /* AppDelegate.swift in Sources */,
+				060C4D232227556600B0BB07 /* ChoreViewModel.swift in Sources */,
 				064A01BE221B53AD001AE3AF /* ThemeColor.swift in Sources */,
 				060C4D1C222710C100B0BB07 /* PlayerModel.swift in Sources */,
+				060C4D21222754D400B0BB07 /* ChoreModel.swift in Sources */,
 				060C4D1F22271E6800B0BB07 /* PlayerViewModel.swift in Sources */,
 				064A01CE221C77A3001AE3AF /* Image.swift in Sources */,
 			);

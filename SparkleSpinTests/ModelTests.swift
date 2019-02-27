@@ -26,13 +26,25 @@ class ModelTests: XCTestCase {
         let playerOneViewModel = PlayerViewModel(playerModel: playerOneModel)
         
         // when
-            // updateproperties is called, what do I expect?
         playerOneViewModel.nameString = name
         playerOneViewModel.updateProperties(playerModel: playerOneModel)
         
         // then
         XCTAssertEqual(playerOneModel.name, "Kevin")
+    }
+    
+    func testCreateChore() {
+        // given
+        let choreName = "Washing dishes"
+        let choreOneModel = ChoreModel(choreName: nil)
+        let choreOneViewModel = ChoreViewModel(choreModel: choreOneModel)
         
+        // when
+        choreOneViewModel.choreNameString = choreName
+        choreOneViewModel.updateProperties(choreModel: choreOneModel)
+        
+        // then
+        XCTAssertEqual(choreOneModel.choreName, "Washing dishes")
     }
     
 

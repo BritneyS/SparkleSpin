@@ -15,8 +15,6 @@ class PlayerViewModel {
     
     init(playerModel: PlayerModel) {
         self.playerModel = playerModel
-        
-        
     }
     
     func updateProperties(playerModel: PlayerModel) {
