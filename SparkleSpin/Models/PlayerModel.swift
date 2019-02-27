@@ -8,6 +8,10 @@
 
 import Foundation
 
-struct PlayerModel {
-    var name: String
+class PlayerModel {
+    var name: String?
+    
+    init(name: String?) {
+        self.name = name
+    }
 }

@@ -22,13 +22,16 @@ class ModelTests: XCTestCase {
     func testCreatePlayer() {
         // given
         let name = "Kevin"
-        var playerOne = PlayerModel(name: "")
+        let playerOneModel = PlayerModel(name: nil)
+        let playerOneViewModel = PlayerViewModel(playerModel: playerOneModel)
         
         // when
-        playerOne.name = name
+            // updateproperties is called, what do I expect?
+        playerOneViewModel.nameString = name
+        playerOneViewModel.updateProperties(playerModel: playerOneModel)
         
         // then
-        XCTAssertEqual(playerOne.name, "Kevin")
+        XCTAssertEqual(playerOneModel.name, "Kevin")
         
     }
     
