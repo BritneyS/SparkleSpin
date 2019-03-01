@@ -17,7 +17,7 @@ class ChoreViewModel {
         self.choreModel = choreModel
     }
     
-    func updateProperties(choreModel: ChoreModel) {
+    func updateProperties(choreModel: ChoreModel, choreNameString: String) {
         setPlayerName(choreModel: choreModel, choreNameString: choreNameString)
     }
     

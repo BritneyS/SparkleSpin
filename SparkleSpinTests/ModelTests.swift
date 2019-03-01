@@ -26,8 +26,7 @@ class ModelTests: XCTestCase {
         let playerOneViewModel = PlayerViewModel(playerModel: playerOneModel)
         
         // when
-        playerOneViewModel.nameString = name
-        playerOneViewModel.updateProperties(playerModel: playerOneModel)
+        playerOneViewModel.updateProperties(playerModel: playerOneModel, nameString: name)
         
         // then
         XCTAssertEqual(playerOneModel.name, "Kevin")
@@ -40,12 +39,9 @@ class ModelTests: XCTestCase {
         let choreOneViewModel = ChoreViewModel(choreModel: choreOneModel)
         
         // when
-        choreOneViewModel.choreNameString = choreName
-        choreOneViewModel.updateProperties(choreModel: choreOneModel)
+        choreOneViewModel.updateProperties(choreModel: choreOneModel, choreNameString: choreName)
         
         // then
         XCTAssertEqual(choreOneModel.choreName, "Washing dishes")
     }
-    
-
 }
