@@ -39,7 +39,7 @@ class ModelTests: XCTestCase {
         let choreOneViewModel = ChoreViewModel(choreModel: choreOneModel)
         
         // when
-        choreOneViewModel.updateProperties(choreModel: choreOneModel, choreNameString: choreName)
+        choreOneViewModel.updateProperties(choreNameString: choreName)
         
         // then
         XCTAssertEqual(choreOneModel.choreName, "Washing dishes")
