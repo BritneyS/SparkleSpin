@@ -26,7 +26,7 @@ class ModelTests: XCTestCase {
         let playerOneViewModel = PlayerViewModel(playerModel: playerOneModel)
         
         // when
-        playerOneViewModel.updateProperties(playerModel: playerOneModel, nameString: name)
+        playerOneViewModel.updateProperties(nameString: name)
         
         // then
         XCTAssertEqual(playerOneModel.name, "Kevin")

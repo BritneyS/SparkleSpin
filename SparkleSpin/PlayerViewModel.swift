@@ -17,11 +17,7 @@ class PlayerViewModel {
         self.playerModel = playerModel
     }
     
-    func updateProperties(playerModel: PlayerModel, nameString: String) {
-        setPlayerName(playerModel: playerModel, nameString: nameString)
-    }
-    
-    private func setPlayerName(playerModel: PlayerModel, nameString: String?) {
+    func updateProperties(nameString: String) {
         playerModel.name = nameString
     }
 }
