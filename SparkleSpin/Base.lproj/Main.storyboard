@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,7 +18,20 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-composite-dark" translatesAutoresizingMaskIntoConstraints="NO" id="adv-ti-P4X">
+                                <rect key="frame" x="28" y="233" width="319" height="201"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="319" id="ECq-Jb-cPA"/>
+                                    <constraint firstAttribute="height" constant="201" id="qhM-se-ybu"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="LightColor"/>
+                        <constraints>
+                            <constraint firstItem="adv-ti-P4X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BnJ-mJ-PeF"/>
+                            <constraint firstItem="adv-ti-P4X" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kIE-5L-Egy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -25,4 +39,10 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo-composite-dark" width="319" height="201"/>
+        <namedColor name="LightColor">
+            <color red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
 </document>
