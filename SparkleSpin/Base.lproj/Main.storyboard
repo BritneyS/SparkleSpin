@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,27 +10,47 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="saxmono.ttf">
+            <string>saxMono</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="SparkleSpin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-composite-dark" translatesAutoresizingMaskIntoConstraints="NO" id="adv-ti-P4X">
-                                <rect key="frame" x="28" y="233" width="319" height="201"/>
+                                <rect key="frame" x="28" y="305.66666666666669" width="319" height="201"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="319" id="ECq-Jb-cPA"/>
                                     <constraint firstAttribute="height" constant="201" id="qhM-se-ybu"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="fFr-J3-6al" customClass="LightButton" customModule="SparkleSpin" customModuleProvider="target">
+                                <rect key="frame" x="28" y="630" width="319" height="58"/>
+                                <color key="backgroundColor" name="LightColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="hXg-oA-lSx"/>
+                                    <constraint firstAttribute="width" constant="319" id="m2u-hF-gNR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="saxMono" family="saxMono" pointSize="32"/>
+                                <state key="normal" title="Start!">
+                                    <color key="titleColor" name="DarkColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="LightColor"/>
                         <constraints>
+                            <constraint firstItem="fFr-J3-6al" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="6rt-Qm-iqI"/>
                             <constraint firstItem="adv-ti-P4X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BnJ-mJ-PeF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fFr-J3-6al" secondAttribute="bottom" constant="90" id="WZj-ew-2LE"/>
                             <constraint firstItem="adv-ti-P4X" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kIE-5L-Egy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fFr-J3-6al" secondAttribute="trailing" constant="28" id="lyo-Lh-7vV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -41,6 +61,9 @@
     </scenes>
     <resources>
         <image name="logo-composite-dark" width="319" height="201"/>
+        <namedColor name="DarkColor">
+            <color red="0.10980392156862745" green="0.11764705882352941" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="LightColor">
             <color red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
