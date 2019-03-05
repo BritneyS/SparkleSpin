@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0601DDDE222EF45D00CFBDE3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0601DDDD222EF45D00CFBDE3 /* HomeViewController.swift */; };
+		0601DDE2222EFA7F00CFBDE3 /* LightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0601DDE1222EFA7F00CFBDE3 /* LightButton.swift */; };
 		060C4D11221F425600B0BB07 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 060C4D10221F425600B0BB07 /* Images.xcassets */; };
 		060C4D13222047AC00B0BB07 /* JUICE_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 060C4D12222047AC00B0BB07 /* JUICE_Regular.ttf */; };
 		060C4D15222047BA00B0BB07 /* Library 3 am.otf in Resources */ = {isa = PBXBuildFile; fileRef = 060C4D14222047BA00B0BB07 /* Library 3 am.otf */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		0601DDDD222EF45D00CFBDE3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0601DDE1222EFA7F00CFBDE3 /* LightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightButton.swift; sourceTree = "<group>"; };
 		060C4D10221F425600B0BB07 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		060C4D12222047AC00B0BB07 /* JUICE_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JUICE_Regular.ttf; sourceTree = "<group>"; };
 		060C4D14222047BA00B0BB07 /* Library 3 am.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Library 3 am.otf"; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		0601DDE0222EFA1400CFBDE3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0601DDE1222EFA7F00CFBDE3 /* LightButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		060C4D1A2227107C00B0BB07 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +141,7 @@
 		064A0199221B3BED001AE3AF /* SparkleSpin */ = {
 			isa = PBXGroup;
 			children = (
+				0601DDE0222EFA1400CFBDE3 /* Views */,
 				0601DDDC222EF2BE00CFBDE3 /* Controllers */,
 				060C4D1D22271E3E00B0BB07 /* ViewModels */,
 				060C4D1A2227107C00B0BB07 /* Models */,
@@ -294,6 +305,7 @@
 				060C4D1C222710C100B0BB07 /* PlayerModel.swift in Sources */,
 				060C4D21222754D400B0BB07 /* ChoreModel.swift in Sources */,
 				060C4D1F22271E6800B0BB07 /* PlayerViewModel.swift in Sources */,
+				0601DDE2222EFA7F00CFBDE3 /* LightButton.swift in Sources */,
 				064A01CE221C77A3001AE3AF /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
