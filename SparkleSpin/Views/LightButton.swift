@@ -55,7 +55,6 @@ class LightButton: UIButton {
         animation.toValue = 0.5
         animation.duration = 0.15
         
-        
         let shadowAnimation = CABasicAnimation(keyPath: "shadowOffSet")
         shadowAnimation.fromValue = CGSize(width: 1.5, height: 2.0)
         shadowAnimation.toValue = CGSize(width: 0.0, height: 0.0)
