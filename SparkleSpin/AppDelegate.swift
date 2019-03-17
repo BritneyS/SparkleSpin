@@ -51,10 +51,11 @@ extension AppDelegate {
         let navigationBarAppearance = UINavigationBar.appearance()
         let attributes = [
             NSAttributedString.Key.foregroundColor: ThemeColor.Light.secondaryColor,
-            NSAttributedString.Key.font: Font.mainBodyFont
+            NSAttributedString.Key.font: Font.wheelBodyFont
         ]
         navigationBarAppearance.barTintColor = ThemeColor.Light.primaryColor
-        navigationBarAppearance.tintColor = ThemeColor.Light.secondaryColor
+        navigationBarAppearance.tintColor = ThemeColor.Light.accentColorOne
         navigationBarAppearance.titleTextAttributes = attributes as [NSAttributedString.Key : Any]
+        navigationBarAppearance.shadowImage = UIImage()
     }
 }
