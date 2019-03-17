@@ -6,13 +6,14 @@
 //  Copyright © 2019 Britney Smith. All rights reserved.
 //
 
-enum Identifier {
-    case homeToPlayer
-    
-    var segueID: String {
-        switch self {
-        case .homeToPlayer:
-            return "homeToPlayer"
-        }
-    }
+struct SegueID {
+    static let homeToPlayer = "homeToPlayer"
+}
+
+struct CellID {
+    static let entryCell = "EntryCell"
+}
+
+struct NibID {
+    static let entryCell = "EntryCell"
 }
