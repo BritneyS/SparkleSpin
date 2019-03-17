@@ -21,6 +21,7 @@ class PlayerViewController: UIViewController {
         playerTableView.delegate = self
         playerTableView.rowHeight = UITableView.automaticDimension
         playerTableView.estimatedRowHeight = 200
+        playerTableView.tableFooterView = UIView()
     
     }
     
