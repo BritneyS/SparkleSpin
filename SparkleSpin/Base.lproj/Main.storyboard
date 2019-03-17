@@ -36,7 +36,7 @@
                                 <color key="backgroundColor" name="LightColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="hXg-oA-lSx"/>
-                                    <constraint firstAttribute="width" constant="319" id="m2u-hF-gNR"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="319" id="m2u-hF-gNR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="LIBRARY3AM" family="LIBRARY 3 AM" pointSize="32"/>
                                 <state key="normal" title="Start!">
@@ -72,7 +72,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ae2-XG-8uP">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ae2-XG-8uP">
                                 <rect key="frame" x="10" y="88" width="355" height="690"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>

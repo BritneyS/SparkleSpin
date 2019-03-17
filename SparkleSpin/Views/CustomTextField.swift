@@ -12,7 +12,12 @@ class CustomTextField: UITextField {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        font = Font.wheelBodyFont
+        styleTextField()
         becomeFirstResponder()
+    }
+    
+    private func styleTextField() {
+        font = Font.wheelBodyFont
+        tintColor = ThemeColor.Light.accentColorOne
     }
 }
