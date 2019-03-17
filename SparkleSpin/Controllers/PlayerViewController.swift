@@ -12,16 +12,11 @@ class PlayerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         setNavigationBarTitle()
     }
     
     private func setNavigationBarTitle() {
-        let navigationBar = navigationController?.navigationBar
-        navigationBar?.topItem?.title = "Choose Players!"
+        navigationItem.title = "Choose Players!"
     }
 
 }
