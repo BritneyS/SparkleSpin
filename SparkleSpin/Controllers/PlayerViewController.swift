@@ -17,16 +17,20 @@ class PlayerViewController: UIViewController {
         super.viewDidLoad()
         setNavigationBarTitle()
         registerNib()
-        playerTableView.dataSource = self
-        playerTableView.delegate = self
-        playerTableView.rowHeight = UITableView.automaticDimension
-        playerTableView.estimatedRowHeight = 200
-        playerTableView.tableFooterView = UIView()
+        setupTableView()
     
     }
     
     private func setNavigationBarTitle() {
         navigationItem.title = "Choose Players!"
+    }
+    
+    private func setupTableView() {
+        playerTableView.dataSource = self
+        playerTableView.delegate = self
+        playerTableView.rowHeight = UITableView.automaticDimension
+        playerTableView.estimatedRowHeight = 200
+        playerTableView.tableFooterView = UIView()
     }
 
 }
