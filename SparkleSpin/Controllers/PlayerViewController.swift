@@ -28,6 +28,8 @@ class PlayerViewController: UIViewController {
     private func setupTableView() {
         playerTableView.dataSource = self
         playerTableView.delegate = self
+        playerTableView.backgroundColor = ThemeColor.Light.primaryColor
+        playerTableView.separatorStyle = .none
         playerTableView.rowHeight = UITableView.automaticDimension
         playerTableView.estimatedRowHeight = 200
         playerTableView.tableFooterView = UIView()
@@ -43,7 +45,7 @@ extension PlayerViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
