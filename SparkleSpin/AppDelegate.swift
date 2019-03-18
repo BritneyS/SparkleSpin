@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        styleNavigationBar()
         return true
     }
 
@@ -44,3 +45,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate {
+    
+    func styleNavigationBar() {
+        let navigationBarAppearance = UINavigationBar.appearance()
+        let attributes = [
+            NSAttributedString.Key.foregroundColor: ThemeColor.Light.secondaryColor,
+            NSAttributedString.Key.font: Font.wheelBodyFont
+        ]
+        navigationBarAppearance.barTintColor = ThemeColor.Light.primaryColor
+        navigationBarAppearance.tintColor = ThemeColor.Light.accentColorOne
+        navigationBarAppearance.titleTextAttributes = attributes as [NSAttributedString.Key : Any]
+        navigationBarAppearance.shadowImage = UIImage()
+    }
+}
