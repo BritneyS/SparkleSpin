@@ -31,7 +31,7 @@ class PlayerViewController: UIViewController {
         playerTableView.backgroundColor = ThemeColor.Light.primaryColor
         playerTableView.separatorStyle = .none
         playerTableView.rowHeight = UITableView.automaticDimension
-        playerTableView.estimatedRowHeight = 200
+        playerTableView.estimatedRowHeight = CGFloat(Constants.estimatedRowHeight)
         playerTableView.tableFooterView = UIView()
     }
 
@@ -54,7 +54,7 @@ extension PlayerViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return CGFloat(Constants.entryCellRowHeight)
     }
     
     

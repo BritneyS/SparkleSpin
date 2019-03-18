@@ -14,6 +14,7 @@
 		0601DE26223EA98800CFBDE3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0601DE25223EA98800CFBDE3 /* CustomTextField.swift */; };
 		0601DE2A223EAF2400CFBDE3 /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0601DE28223EAF2400CFBDE3 /* EntryCell.swift */; };
 		0601DE2B223EAF2400CFBDE3 /* EntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0601DE29223EAF2400CFBDE3 /* EntryCell.xib */; };
+		0601DE2D22402C0F00CFBDE3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0601DE2C22402C0F00CFBDE3 /* Constants.swift */; };
 		060C4D11221F425600B0BB07 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 060C4D10221F425600B0BB07 /* Images.xcassets */; };
 		060C4D13222047AC00B0BB07 /* JUICE_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 060C4D12222047AC00B0BB07 /* JUICE_Regular.ttf */; };
 		060C4D15222047BA00B0BB07 /* Library 3 am.otf in Resources */ = {isa = PBXBuildFile; fileRef = 060C4D14222047BA00B0BB07 /* Library 3 am.otf */; };
@@ -53,6 +54,7 @@
 		0601DE25223EA98800CFBDE3 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		0601DE28223EAF2400CFBDE3 /* EntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
 		0601DE29223EAF2400CFBDE3 /* EntryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryCell.xib; sourceTree = "<group>"; };
+		0601DE2C22402C0F00CFBDE3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		060C4D10221F425600B0BB07 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		060C4D12222047AC00B0BB07 /* JUICE_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JUICE_Regular.ttf; sourceTree = "<group>"; };
 		060C4D14222047BA00B0BB07 /* Library 3 am.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Library 3 am.otf"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				0601DE23223DBC4F00CFBDE3 /* Identifier.swift */,
+				0601DE2C22402C0F00CFBDE3 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				064A019B221B3BED001AE3AF /* AppDelegate.swift in Sources */,
 				060C4D232227556600B0BB07 /* ChoreViewModel.swift in Sources */,
 				0601DE2A223EAF2400CFBDE3 /* EntryCell.swift in Sources */,
+				0601DE2D22402C0F00CFBDE3 /* Constants.swift in Sources */,
 				064A01BE221B53AD001AE3AF /* ThemeColor.swift in Sources */,
 				0601DDDE222EF45D00CFBDE3 /* HomeViewController.swift in Sources */,
 				060C4D1C222710C100B0BB07 /* PlayerModel.swift in Sources */,
