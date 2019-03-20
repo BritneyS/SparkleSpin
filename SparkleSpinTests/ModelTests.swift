@@ -44,4 +44,19 @@ class ModelTests: XCTestCase {
         // then
         XCTAssertEqual(choreOneModel.choreName, "Washing dishes")
     }
+    
+    func testAddPlayerToPlayerList() {
+        // given
+        let name = "Kevin"
+        let playerOneModel = PlayerModel(name: nil)
+        let playerOneViewModel = PlayerViewModel(playerModel: playerOneModel)
+
+        playerOneViewModel.updateProperties(nameString: name)
+
+        // when
+        playerOneViewModel.addPlayerToPlayerList(player: Player)
+
+        // then
+        XCTAssertEqual(playerListModel.playerList, ["Kevin"])
+    }
 }
