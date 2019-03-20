@@ -19,9 +19,14 @@ class PlayerViewModel {
         self.playerListModel = playerListModel
     }
     
-    func updateProperties(nameString: String) {
-        for playerModel in playerModels {
-            playerModel.name = nameString
+    func updateProperties(nameStrings: [String]) {
+//        for playerModel in playerModels {
+//            playerModel.name = nameString
+//        }
+        
+        for name in nameStrings {
+            let playerModel = PlayerModel(name: name)
+            playerListModel.playerList?.append(playerModel)
         }
     }
     
