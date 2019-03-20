@@ -10,27 +10,19 @@ import Foundation
 
 class PlayerViewModel {
     
-    private let playerModels: [PlayerModel]
+    //private let playerModels: [PlayerModel]
     private let playerListModel: PlayerListModel
     var nameString: String? = nil
     
-    init(playerModels: [PlayerModel], playerListModel: PlayerListModel) {
-        self.playerModels = playerModels
+    init(/*playerModels: [PlayerModel],*/ playerListModel: PlayerListModel) {
+        //self.playerModels = playerModels
         self.playerListModel = playerListModel
     }
     
-    func updateProperties(nameStrings: [String]) {
-//        for playerModel in playerModels {
-//            playerModel.name = nameString
-//        }
-        
+    func createPlayersWith(names nameStrings: [String]) {
         for name in nameStrings {
             let playerModel = PlayerModel(name: name)
             playerListModel.playerList?.append(playerModel)
         }
-    }
-    
-    func addPlayerToPlayerList(player: PlayerModel) {
-        playerListModel.playerList?.append(player)
     }
 }

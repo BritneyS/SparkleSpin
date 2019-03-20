@@ -18,66 +18,66 @@ class ModelTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testCreatePlayer() {
-        // given
-        let name = "Kevin"
-        let playerOneModel = PlayerModel(name: nil)
-        let playerListModel = PlayerListModel(playerList: [])
-        let playerOneViewModel = PlayerViewModel(playerModel: playerOneModel, playerListModel: playerListModel)
-        
-        // when
-        playerOneViewModel.updateProperties(nameString: name)
-        
-        // then
-        XCTAssertEqual(playerOneModel.name, "Kevin")
-    }
     
-    func testCreateChore() {
-        // given
-        let choreName = "Washing dishes"
-        let choreOneModel = ChoreModel(choreName: nil)
-        let choreOneViewModel = ChoreViewModel(choreModel: choreOneModel)
-        
-        // when
-        choreOneViewModel.updateProperties(choreNameString: choreName)
-        
-        // then
-        XCTAssertEqual(choreOneModel.choreName, "Washing dishes")
-    }
-    
-    func testAddPlayerToPlayerList() {
-        // given
-        let name = "Kevin"
-        let playerOneModel = PlayerModel(name: nil)
-        let playerListModel = PlayerListModel(playerList: [])
-        let playerOneViewModel = PlayerViewModel(playerModel: playerOneModel, playerListModel: playerListModel
-        )
-
-        playerOneViewModel.updateProperties(nameString: name)
-
-        // when
-        playerOneViewModel.addPlayerToPlayerList(player: playerOneModel)
-
-        // then
-        XCTAssertEqual(playerListModel.playerList, [PlayerModel(name: "Kevin")])
-    }
+//    func testCreatePlayer() {
+//        // given
+//        let name = "Kevin"
+//        let playerOneModel = PlayerModel(name: nil)
+//        let playerListModel = PlayerListModel(playerList: [])
+//        let playerOneViewModel = PlayerViewModel(playerModels: [playerOneModel], playerListModel: playerListModel)
+//
+//        // when
+//        playerOneViewModel.updateProperties(nameString: name)
+//
+//        // then
+//        XCTAssertEqual(playerOneModel.name, "Kevin")
+//    }
+//
+//    func testCreateChore() {
+//        // given
+//        let choreName = "Washing dishes"
+//        let choreOneModel = ChoreModel(choreName: nil)
+//        let choreOneViewModel = ChoreViewModel(choreModel: choreOneModel)
+//
+//        // when
+//        choreOneViewModel.updateProperties(choreNameString: choreName)
+//
+//        // then
+//        XCTAssertEqual(choreOneModel.choreName, "Washing dishes")
+//    }
+//
+//    func testAddPlayerToPlayerList() {
+//        // given
+//        let name = "Kevin"
+//        let playerOneModel = PlayerModel(name: nil)
+//        let playerListModel = PlayerListModel(playerList: [])
+//        let playerOneViewModel = PlayerViewModel(playerModels: [playerOneModel], playerListModel: playerListModel
+//        )
+//
+//        playerOneViewModel.updateProperties(nameString: name)
+//
+//        // when
+//        playerOneViewModel.addPlayerToPlayerList(player: playerOneModel)
+//
+//        // then
+//        XCTAssertEqual(playerListModel.playerList, [PlayerModel(name: "Kevin")])
+//    }
     
     func testAddTwoPlayersToPlayerList() {
         // given
         let nameOne = "Kevin"
-        let playerOneModel = PlayerModel(name: nil)
-        
         let nameTwo = "Lisa"
-        let playerTwoModel = PlayerModel(name: nil)
+        let nameList = [nameOne, nameTwo]
         
         let playerListModel = PlayerListModel(playerList: [])
-        let playerOneViewModel = PlayerViewModel(playerModel: playerOneModel, playerListModel: playerListModel
+        let playerViewModel = PlayerViewModel(/*playerModels: [playerOneModel, playerTwoModel],*/ playerListModel: playerListModel
         )
         
         // when
+        playerViewModel.createPlayersWith(names: nameList)
         
         // then
+        XCTAssertEqual(playerListModel.playerList, [PlayerModel(name: "Kevin"), PlayerModel(name: "Lisa")])
         
     }
 }
