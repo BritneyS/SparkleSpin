@@ -22,7 +22,7 @@
 		060C4D17222047C500B0BB07 /* PoetsenOne-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 060C4D16222047C500B0BB07 /* PoetsenOne-Regular.otf */; };
 		060C4D19222047D100B0BB07 /* saxmono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 060C4D18222047D100B0BB07 /* saxmono.ttf */; };
 		060C4D1C222710C100B0BB07 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060C4D1B222710C100B0BB07 /* PlayerModel.swift */; };
-		060C4D1F22271E6800B0BB07 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060C4D1E22271E6800B0BB07 /* PlayerViewModel.swift */; };
+		060C4D1F22271E6800B0BB07 /* PlayerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060C4D1E22271E6800B0BB07 /* PlayerListViewModel.swift */; };
 		060C4D21222754D400B0BB07 /* ChoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060C4D20222754D400B0BB07 /* ChoreModel.swift */; };
 		060C4D232227556600B0BB07 /* ChoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060C4D222227556600B0BB07 /* ChoreViewModel.swift */; };
 		064A019B221B3BED001AE3AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A019A221B3BED001AE3AF /* AppDelegate.swift */; };
@@ -63,7 +63,7 @@
 		060C4D16222047C500B0BB07 /* PoetsenOne-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoetsenOne-Regular.otf"; sourceTree = "<group>"; };
 		060C4D18222047D100B0BB07 /* saxmono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = saxmono.ttf; sourceTree = "<group>"; };
 		060C4D1B222710C100B0BB07 /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
-		060C4D1E22271E6800B0BB07 /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
+		060C4D1E22271E6800B0BB07 /* PlayerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListViewModel.swift; sourceTree = "<group>"; };
 		060C4D20222754D400B0BB07 /* ChoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreModel.swift; sourceTree = "<group>"; };
 		060C4D222227556600B0BB07 /* ChoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreViewModel.swift; sourceTree = "<group>"; };
 		064A0197221B3BED001AE3AF /* SparkleSpin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SparkleSpin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,7 +150,7 @@
 		060C4D1D22271E3E00B0BB07 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				060C4D1E22271E6800B0BB07 /* PlayerViewModel.swift */,
+				060C4D1E22271E6800B0BB07 /* PlayerListViewModel.swift */,
 				060C4D222227556600B0BB07 /* ChoreViewModel.swift */,
 			);
 			name = ViewModels;
@@ -347,7 +347,7 @@
 				060C4D21222754D400B0BB07 /* ChoreModel.swift in Sources */,
 				0601DE2F2242913500CFBDE3 /* PlayerListModel.swift in Sources */,
 				0601DE24223DBC4F00CFBDE3 /* Identifier.swift in Sources */,
-				060C4D1F22271E6800B0BB07 /* PlayerViewModel.swift in Sources */,
+				060C4D1F22271E6800B0BB07 /* PlayerListViewModel.swift in Sources */,
 				0601DDE2222EFA7F00CFBDE3 /* LightButton.swift in Sources */,
 				0601DE21223DBA1500CFBDE3 /* PlayerViewController.swift in Sources */,
 				064A01CE221C77A3001AE3AF /* Image.swift in Sources */,

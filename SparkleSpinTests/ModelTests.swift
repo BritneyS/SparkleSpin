@@ -70,11 +70,11 @@ class ModelTests: XCTestCase {
         let nameList = [nameOne, nameTwo]
         
         let playerListModel = PlayerListModel(playerList: [])
-        let playerViewModel = PlayerViewModel(/*playerModels: [playerOneModel, playerTwoModel],*/ playerListModel: playerListModel
+        let playerListViewModel = PlayerListViewModel(playerListModel: playerListModel
         )
         
         // when
-        playerViewModel.createPlayersWith(names: nameList)
+        playerListViewModel.createPlayersWith(names: nameList)
         
         // then
         XCTAssertEqual(playerListModel.playerList, [PlayerModel(name: "Kevin"), PlayerModel(name: "Lisa")])

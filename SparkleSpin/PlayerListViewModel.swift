@@ -1,5 +1,5 @@
 //
-//  PlayerViewModel.swift
+//  PlayerListViewModel.swift
 //  SparkleSpin
 //
 //  Created by Britney Smith on 2/27/19.
@@ -8,14 +8,12 @@
 
 import Foundation
 
-class PlayerViewModel {
+class PlayerListViewModel {
     
-    //private let playerModels: [PlayerModel]
     private let playerListModel: PlayerListModel
     var nameString: String? = nil
     
-    init(/*playerModels: [PlayerModel],*/ playerListModel: PlayerListModel) {
-        //self.playerModels = playerModels
+    init(playerListModel: PlayerListModel) {
         self.playerListModel = playerListModel
     }
     
