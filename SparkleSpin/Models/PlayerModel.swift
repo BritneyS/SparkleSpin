@@ -15,3 +15,10 @@ class PlayerModel {
         self.name = name
     }
 }
+
+extension PlayerModel: Equatable {
+    static func == (lhs: PlayerModel, rhs: PlayerModel) -> Bool {
+        return lhs.name == rhs.name
+    }
+}
+

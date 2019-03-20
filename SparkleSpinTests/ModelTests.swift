@@ -23,7 +23,8 @@ class ModelTests: XCTestCase {
         // given
         let name = "Kevin"
         let playerOneModel = PlayerModel(name: nil)
-        let playerOneViewModel = PlayerViewModel(playerModel: playerOneModel)
+        let playerListModel = PlayerListModel(playerList: [])
+        let playerOneViewModel = PlayerViewModel(playerModel: playerOneModel, playerListModel: playerListModel)
         
         // when
         playerOneViewModel.updateProperties(nameString: name)
@@ -49,14 +50,17 @@ class ModelTests: XCTestCase {
         // given
         let name = "Kevin"
         let playerOneModel = PlayerModel(name: nil)
-        let playerOneViewModel = PlayerViewModel(playerModel: playerOneModel)
+        let playerListModel = PlayerListModel(playerList: [])
+        let playerOneViewModel = PlayerViewModel(playerModel: playerOneModel, playerListModel: playerListModel
+        )
+        let expectedValue: [PlayerModel]? = [PlayerModel(name: name)]
 
         playerOneViewModel.updateProperties(nameString: name)
 
         // when
-        playerOneViewModel.addPlayerToPlayerList(player: Player)
+        playerOneViewModel.addPlayerToPlayerList(player: playerOneModel)
 
         // then
-        XCTAssertEqual(playerListModel.playerList, ["Kevin"])
+        XCTAssertEqual(playerListModel.playerList, expectedValue)
     }
 }

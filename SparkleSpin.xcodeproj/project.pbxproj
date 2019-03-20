@@ -15,6 +15,7 @@
 		0601DE2A223EAF2400CFBDE3 /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0601DE28223EAF2400CFBDE3 /* EntryCell.swift */; };
 		0601DE2B223EAF2400CFBDE3 /* EntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0601DE29223EAF2400CFBDE3 /* EntryCell.xib */; };
 		0601DE2D22402C0F00CFBDE3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0601DE2C22402C0F00CFBDE3 /* Constants.swift */; };
+		0601DE2F2242913500CFBDE3 /* PlayerListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0601DE2E2242913500CFBDE3 /* PlayerListModel.swift */; };
 		060C4D11221F425600B0BB07 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 060C4D10221F425600B0BB07 /* Images.xcassets */; };
 		060C4D13222047AC00B0BB07 /* JUICE_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 060C4D12222047AC00B0BB07 /* JUICE_Regular.ttf */; };
 		060C4D15222047BA00B0BB07 /* Library 3 am.otf in Resources */ = {isa = PBXBuildFile; fileRef = 060C4D14222047BA00B0BB07 /* Library 3 am.otf */; };
@@ -55,6 +56,7 @@
 		0601DE28223EAF2400CFBDE3 /* EntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
 		0601DE29223EAF2400CFBDE3 /* EntryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryCell.xib; sourceTree = "<group>"; };
 		0601DE2C22402C0F00CFBDE3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0601DE2E2242913500CFBDE3 /* PlayerListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListModel.swift; sourceTree = "<group>"; };
 		060C4D10221F425600B0BB07 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		060C4D12222047AC00B0BB07 /* JUICE_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JUICE_Regular.ttf; sourceTree = "<group>"; };
 		060C4D14222047BA00B0BB07 /* Library 3 am.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Library 3 am.otf"; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			children = (
 				060C4D1B222710C100B0BB07 /* PlayerModel.swift */,
 				060C4D20222754D400B0BB07 /* ChoreModel.swift */,
+				0601DE2E2242913500CFBDE3 /* PlayerListModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				0601DDDE222EF45D00CFBDE3 /* HomeViewController.swift in Sources */,
 				060C4D1C222710C100B0BB07 /* PlayerModel.swift in Sources */,
 				060C4D21222754D400B0BB07 /* ChoreModel.swift in Sources */,
+				0601DE2F2242913500CFBDE3 /* PlayerListModel.swift in Sources */,
 				0601DE24223DBC4F00CFBDE3 /* Identifier.swift in Sources */,
 				060C4D1F22271E6800B0BB07 /* PlayerViewModel.swift in Sources */,
 				0601DDE2222EFA7F00CFBDE3 /* LightButton.swift in Sources */,
