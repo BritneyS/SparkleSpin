@@ -8,9 +8,9 @@
 
 import UIKit
 
-struct ThemeColor {
+enum ThemeColor {
     // default
-    struct Light {
+    enum Light {
         static let primaryColor = UIColor(named: "LightColor")
         static let secondaryColor = UIColor(named: "DarkColor")
         static let accentColorOne = UIColor(named: "Violet")
