@@ -62,4 +62,22 @@ class ModelTests: XCTestCase {
         // then
         XCTAssertEqual(playerListModel.playerList, [PlayerModel(name: "Kevin")])
     }
+    
+    func testAddTwoPlayersToPlayerList() {
+        // given
+        let nameOne = "Kevin"
+        let playerOneModel = PlayerModel(name: nil)
+        
+        let nameTwo = "Lisa"
+        let playerTwoModel = PlayerModel(name: nil)
+        
+        let playerListModel = PlayerListModel(playerList: [])
+        let playerOneViewModel = PlayerViewModel(playerModel: playerOneModel, playerListModel: playerListModel
+        )
+        
+        // when
+        
+        // then
+        
+    }
 }
