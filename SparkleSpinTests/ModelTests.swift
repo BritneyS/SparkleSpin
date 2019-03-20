@@ -53,7 +53,6 @@ class ModelTests: XCTestCase {
         let playerListModel = PlayerListModel(playerList: [])
         let playerOneViewModel = PlayerViewModel(playerModel: playerOneModel, playerListModel: playerListModel
         )
-        let expectedValue: [PlayerModel]? = [PlayerModel(name: name)]
 
         playerOneViewModel.updateProperties(nameString: name)
 
@@ -61,6 +60,6 @@ class ModelTests: XCTestCase {
         playerOneViewModel.addPlayerToPlayerList(player: playerOneModel)
 
         // then
-        XCTAssertEqual(playerListModel.playerList, expectedValue)
+        XCTAssertEqual(playerListModel.playerList, [PlayerModel(name: "Kevin")])
     }
 }
