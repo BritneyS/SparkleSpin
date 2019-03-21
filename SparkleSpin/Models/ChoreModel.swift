@@ -6,8 +6,6 @@
 //  Copyright © 2019 Britney Smith. All rights reserved.
 //
 
-import Foundation
-
 class ChoreModel {
     var choreName: String?
     

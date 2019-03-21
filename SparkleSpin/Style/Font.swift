@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Font {
+enum Font {
     static let titleFont = UIFont(name: "LIBRARY3AM", size: 64)
     static let decorativeFont = UIFont(name: "PoetsenOne-Regular", size: 48)
     static let subheaderFont = UIFont(name: "saxMono", size: 40)
