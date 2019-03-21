@@ -30,10 +30,14 @@ class PlayerListViewModel {
     }
     
     func deletePlayer(playerToDelete: PlayerModel) {
-        for (index, player) in playerListModel.playerList?.enumerated() ?? [].enumerated() {
+        var playerSet = Set<PlayerModel>((playerListModel.playerList.map { $0 } ) ?? [])
+        
+        for player in playerSet {
             if player == playerToDelete {
-                playerListModel.playerList?.remove(at: index)
+                playerSet.remove(player)
             }
-        } // use Set to have unique identifiers
+        }
+        
+        playerListModel.playerList = Array(playerSet)
     }
 }

@@ -24,14 +24,13 @@ class ModelTests: XCTestCase {
         let name = "Kevin"
         
         let playerListModel = PlayerListModel(playerList: [])
-        let playerListViewModel = PlayerListViewModel(playerListModel: playerListModel
-        )
+        let playerListViewModel = PlayerListViewModel(playerListModel: playerListModel)
 
         // when
         let playerOne = playerListViewModel.createPlayerWith(name: name)
 
         // then
-        XCTAssertEqual(playerOne,  PlayerModel(name: "Kevin"))
+        XCTAssertEqual(playerOne.name, "Kevin")
     }
     
     func testCreateTwoPlayers() {
@@ -40,15 +39,14 @@ class ModelTests: XCTestCase {
         let nameTwo = "Lisa"
         
         let playerListModel = PlayerListModel(playerList: [])
-        let playerListViewModel = PlayerListViewModel(playerListModel: playerListModel
-        )
+        let playerListViewModel = PlayerListViewModel(playerListModel: playerListModel)
         
         // when
         let playerOne = playerListViewModel.createPlayerWith(name: nameOne)
         let playerTwo = playerListViewModel.createPlayerWith(name: nameTwo)
         
         // then
-        XCTAssertEqual([playerOne, playerTwo], [PlayerModel(name: "Kevin"), PlayerModel(name: "Lisa")])
+        XCTAssertEqual([playerOne.name, playerTwo.name], ["Kevin", "Lisa"])
     }
     
     func testAddOnePlayerToPlayerList() {
@@ -63,7 +61,7 @@ class ModelTests: XCTestCase {
         playerListViewModel.addPlayerToPlayerList(player: playerOne)
         
         // then
-        XCTAssertEqual(playerListModel.playerList, [PlayerModel(name: "Kevin")])
+        XCTAssertEqual(playerListModel.playerList?[0].name, "Kevin")
     }
     
     func testAddAnotherPlayerToPlayerList() {
@@ -72,8 +70,7 @@ class ModelTests: XCTestCase {
         let nameTwo = "Lisa"
         
         let playerListModel = PlayerListModel(playerList: [])
-        let playerListViewModel = PlayerListViewModel(playerListModel: playerListModel
-        )
+        let playerListViewModel = PlayerListViewModel(playerListModel: playerListModel)
         
         let playerOne = playerListViewModel.createPlayerWith(name: nameOne)
         playerListViewModel.addPlayerToPlayerList(player: playerOne)
@@ -83,7 +80,8 @@ class ModelTests: XCTestCase {
         playerListViewModel.addPlayerToPlayerList(player: playerTwo)
         
         // then
-        XCTAssertEqual(playerListModel.playerList, [PlayerModel(name: "Kevin"), PlayerModel(name: "Lisa")])
+        guard let playerList = playerListModel.playerList else { return }
+        XCTAssertEqual(playerList.map { $0.name }, ["Kevin", "Lisa"])
         
     }
     
@@ -93,8 +91,7 @@ class ModelTests: XCTestCase {
         let nameTwo = "Lisa"
         
         let playerListModel = PlayerListModel(playerList: [])
-        let playerListViewModel = PlayerListViewModel(playerListModel: playerListModel
-        )
+        let playerListViewModel = PlayerListViewModel(playerListModel: playerListModel)
         
         let playerOne = playerListViewModel.createPlayerWith(name: nameOne)
         playerListViewModel.addPlayerToPlayerList(player: playerOne)
@@ -106,7 +103,7 @@ class ModelTests: XCTestCase {
         let totalPlayerList = playerListViewModel.getPlayerList()
         
         // then
-        XCTAssertEqual(totalPlayerList, [PlayerModel(name: "Kevin"), PlayerModel(name: "Lisa")])
+        XCTAssertEqual(totalPlayerList.map { $0.name }, ["Kevin", "Lisa"])
     }
     
     func testDeletePlayer() {
@@ -115,8 +112,7 @@ class ModelTests: XCTestCase {
         let nameTwo = "Lisa"
         
         let playerListModel = PlayerListModel(playerList: [])
-        let playerListViewModel = PlayerListViewModel(playerListModel: playerListModel
-        )
+        let playerListViewModel = PlayerListViewModel(playerListModel: playerListModel)
         
         let playerOne = playerListViewModel.createPlayerWith(name: nameOne)
         playerListViewModel.addPlayerToPlayerList(player: playerOne)
@@ -128,7 +124,7 @@ class ModelTests: XCTestCase {
         playerListViewModel.deletePlayer(playerToDelete: playerOne)
         
         // then
-        XCTAssertEqual(playerListModel.playerList, [PlayerModel(name: "Lisa")])
+        XCTAssertEqual(playerListModel.playerList?[0].name, "Lisa")
     }
     
     func testDeletePlayerWithSameName() {
@@ -138,8 +134,7 @@ class ModelTests: XCTestCase {
         let nameThree = "Kevin"
         
         let playerListModel = PlayerListModel(playerList: [])
-        let playerListViewModel = PlayerListViewModel(playerListModel: playerListModel
-        )
+        let playerListViewModel = PlayerListViewModel(playerListModel: playerListModel)
         
         let playerOne = playerListViewModel.createPlayerWith(name: nameOne)
         playerListViewModel.addPlayerToPlayerList(player: playerOne)
@@ -154,7 +149,7 @@ class ModelTests: XCTestCase {
         playerListViewModel.deletePlayer(playerToDelete: playerThree)
         
         // then
-        XCTAssertEqual(playerListModel.playerList, [PlayerModel(name: "Kevin"), PlayerModel(name: "Lisa")])
-        
+        guard let playerArray = playerListModel.playerList else { return }
+        XCTAssertEqual(Set(playerArray.map { $0.name }), Set(["Kevin", "Lisa"]))
     }
 }
