@@ -74,7 +74,7 @@ class ModelTests: XCTestCase {
         )
         
         // when
-        playerListViewModel.createPlayersWith(names: nameList)
+        let _ = playerListViewModel.createPlayersWith(names: nameList)
         
         // then
         XCTAssertEqual(playerListModel.playerList, [PlayerModel(name: "Kevin"), PlayerModel(name: "Lisa")])

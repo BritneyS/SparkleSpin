@@ -17,10 +17,11 @@ class PlayerListViewModel {
         self.playerListModel = playerListModel
     }
     
-    func createPlayersWith(names nameStrings: [String]) {
+    func createPlayersWith(names nameStrings: [String]) -> [PlayerModel] {
         for name in nameStrings {
             let playerModel = PlayerModel(name: name)
             playerListModel.playerList?.append(playerModel)
         }
+        return playerListModel.playerList ?? []
     }
 }
