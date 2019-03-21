@@ -19,19 +19,21 @@ class ModelTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-//    func testCreatePlayer() {
-//        // given
-//        let name = "Kevin"
-//        let playerOneModel = PlayerModel(name: nil)
-//        let playerListModel = PlayerListModel(playerList: [])
-//        let playerOneViewModel = PlayerViewModel(playerModels: [playerOneModel], playerListModel: playerListModel)
-//
-//        // when
-//        playerOneViewModel.updateProperties(nameString: name)
-//
-//        // then
-//        XCTAssertEqual(playerOneModel.name, "Kevin")
-//    }
+    func testCreateOnePlayer() {
+        // given
+        let name = "Kevin"
+        let nameList = [name]
+        
+        let playerListModel = PlayerListModel(playerList: [])
+        let playerListViewModel = PlayerListViewModel(playerListModel: playerListModel
+        )
+
+        // when
+        let _ = playerListViewModel.createPlayersWith(names: nameList)
+
+        // then
+        XCTAssertEqual(playerListModel.playerList,  [PlayerModel(name: "Kevin")])
+    }
 //
 //    func testCreateChore() {
 //        // given
@@ -63,7 +65,7 @@ class ModelTests: XCTestCase {
 //        XCTAssertEqual(playerListModel.playerList, [PlayerModel(name: "Kevin")])
 //    }
     
-    func testAddTwoPlayersToPlayerList() {
+    func testCreateTwoPlayers() {
         // given
         let nameOne = "Kevin"
         let nameTwo = "Lisa"
