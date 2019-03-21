@@ -6,6 +6,8 @@
 //  Copyright © 2019 Britney Smith. All rights reserved.
 //
 
+import Foundation
+
 class PlayerModel {
     var name: String?
     var uuid: String?
