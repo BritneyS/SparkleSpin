@@ -6,14 +6,14 @@
 //  Copyright © 2019 Britney Smith. All rights reserved.
 //
 
-struct SegueID {
+enum SegueID {
     static let homeToPlayer = "homeToPlayer"
 }
 
-struct CellID {
+enum CellID {
     static let entryCell = "EntryCell"
 }
 
-struct NibID {
+enum NibID {
     static let entryCell = "EntryCell"
 }
