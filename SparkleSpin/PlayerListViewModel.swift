@@ -17,11 +17,23 @@ class PlayerListViewModel {
         self.playerListModel = playerListModel
     }
     
-    func createPlayersWith(names nameStrings: [String]) -> [PlayerModel] {
-        for name in nameStrings {
-            let playerModel = PlayerModel(name: name)
-            playerListModel.playerList?.append(playerModel)
-        }
+    func createPlayerWith(name: String) -> PlayerModel {
+        return PlayerModel(name: name)
+    }
+    
+    func addPlayerToPlayerList(player: PlayerModel) {
+        playerListModel.playerList?.append(player)
+    }
+    
+    func getPlayerList() -> [PlayerModel] {
         return playerListModel.playerList ?? []
+    }
+    
+    func deletePlayer(playerToDelete: PlayerModel) {
+        for (index, player) in playerListModel.playerList?.enumerated() ?? [].enumerated() {
+            if player == playerToDelete {
+                playerListModel.playerList?.remove(at: index)
+            }
+        } // use Set to have unique identifiers
     }
 }

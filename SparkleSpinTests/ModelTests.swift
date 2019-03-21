@@ -22,61 +22,136 @@ class ModelTests: XCTestCase {
     func testCreateOnePlayer() {
         // given
         let name = "Kevin"
-        let nameList = [name]
         
         let playerListModel = PlayerListModel(playerList: [])
         let playerListViewModel = PlayerListViewModel(playerListModel: playerListModel
         )
 
         // when
-        let _ = playerListViewModel.createPlayersWith(names: nameList)
+        let playerOne = playerListViewModel.createPlayerWith(name: name)
 
         // then
-        XCTAssertEqual(playerListModel.playerList,  [PlayerModel(name: "Kevin")])
+        XCTAssertEqual(playerOne,  PlayerModel(name: "Kevin"))
     }
-//
-//    func testCreateChore() {
-//        // given
-//        let choreName = "Washing dishes"
-//        let choreOneModel = ChoreModel(choreName: nil)
-//        let choreOneViewModel = ChoreViewModel(choreModel: choreOneModel)
-//
-//        // when
-//        choreOneViewModel.updateProperties(choreNameString: choreName)
-//
-//        // then
-//        XCTAssertEqual(choreOneModel.choreName, "Washing dishes")
-//    }
-//
-//    func testAddPlayerToPlayerList() {
-//        // given
-//        let name = "Kevin"
-//        let playerOneModel = PlayerModel(name: nil)
-//        let playerListModel = PlayerListModel(playerList: [])
-//        let playerOneViewModel = PlayerViewModel(playerModels: [playerOneModel], playerListModel: playerListModel
-//        )
-//
-//        playerOneViewModel.updateProperties(nameString: name)
-//
-//        // when
-//        playerOneViewModel.addPlayerToPlayerList(player: playerOneModel)
-//
-//        // then
-//        XCTAssertEqual(playerListModel.playerList, [PlayerModel(name: "Kevin")])
-//    }
     
     func testCreateTwoPlayers() {
         // given
         let nameOne = "Kevin"
         let nameTwo = "Lisa"
-        let nameList = [nameOne, nameTwo]
         
         let playerListModel = PlayerListModel(playerList: [])
         let playerListViewModel = PlayerListViewModel(playerListModel: playerListModel
         )
         
         // when
-        let _ = playerListViewModel.createPlayersWith(names: nameList)
+        let playerOne = playerListViewModel.createPlayerWith(name: nameOne)
+        let playerTwo = playerListViewModel.createPlayerWith(name: nameTwo)
+        
+        // then
+        XCTAssertEqual([playerOne, playerTwo], [PlayerModel(name: "Kevin"), PlayerModel(name: "Lisa")])
+    }
+    
+    func testAddOnePlayerToPlayerList() {
+        // given
+        let name = "Kevin"
+        
+        let playerListModel = PlayerListModel(playerList: [])
+        let playerListViewModel = PlayerListViewModel(playerListModel: playerListModel)
+        let playerOne = playerListViewModel.createPlayerWith(name: name)
+        
+        // when
+        playerListViewModel.addPlayerToPlayerList(player: playerOne)
+        
+        // then
+        XCTAssertEqual(playerListModel.playerList, [PlayerModel(name: "Kevin")])
+    }
+    
+    func testAddAnotherPlayerToPlayerList() {
+        // given
+        let nameOne = "Kevin"
+        let nameTwo = "Lisa"
+        
+        let playerListModel = PlayerListModel(playerList: [])
+        let playerListViewModel = PlayerListViewModel(playerListModel: playerListModel
+        )
+        
+        let playerOne = playerListViewModel.createPlayerWith(name: nameOne)
+        playerListViewModel.addPlayerToPlayerList(player: playerOne)
+        
+        // when
+        let playerTwo = playerListViewModel.createPlayerWith(name: nameTwo)
+        playerListViewModel.addPlayerToPlayerList(player: playerTwo)
+        
+        // then
+        XCTAssertEqual(playerListModel.playerList, [PlayerModel(name: "Kevin"), PlayerModel(name: "Lisa")])
+        
+    }
+    
+    func testGetPlayerList() {
+        // given
+        let nameOne = "Kevin"
+        let nameTwo = "Lisa"
+        
+        let playerListModel = PlayerListModel(playerList: [])
+        let playerListViewModel = PlayerListViewModel(playerListModel: playerListModel
+        )
+        
+        let playerOne = playerListViewModel.createPlayerWith(name: nameOne)
+        playerListViewModel.addPlayerToPlayerList(player: playerOne)
+        
+        let playerTwo = playerListViewModel.createPlayerWith(name: nameTwo)
+        playerListViewModel.addPlayerToPlayerList(player: playerTwo)
+        
+        // when
+        let totalPlayerList = playerListViewModel.getPlayerList()
+        
+        // then
+        XCTAssertEqual(totalPlayerList, [PlayerModel(name: "Kevin"), PlayerModel(name: "Lisa")])
+    }
+    
+    func testDeletePlayer() {
+        // given
+        let nameOne = "Kevin"
+        let nameTwo = "Lisa"
+        
+        let playerListModel = PlayerListModel(playerList: [])
+        let playerListViewModel = PlayerListViewModel(playerListModel: playerListModel
+        )
+        
+        let playerOne = playerListViewModel.createPlayerWith(name: nameOne)
+        playerListViewModel.addPlayerToPlayerList(player: playerOne)
+        
+        let playerTwo = playerListViewModel.createPlayerWith(name: nameTwo)
+        playerListViewModel.addPlayerToPlayerList(player: playerTwo)
+        
+        // when
+        playerListViewModel.deletePlayer(playerToDelete: playerOne)
+        
+        // then
+        XCTAssertEqual(playerListModel.playerList, [PlayerModel(name: "Lisa")])
+    }
+    
+    func testDeletePlayerWithSameName() {
+        // given
+        let nameOne = "Kevin"
+        let nameTwo = "Lisa"
+        let nameThree = "Kevin"
+        
+        let playerListModel = PlayerListModel(playerList: [])
+        let playerListViewModel = PlayerListViewModel(playerListModel: playerListModel
+        )
+        
+        let playerOne = playerListViewModel.createPlayerWith(name: nameOne)
+        playerListViewModel.addPlayerToPlayerList(player: playerOne)
+        
+        let playerTwo = playerListViewModel.createPlayerWith(name: nameTwo)
+        playerListViewModel.addPlayerToPlayerList(player: playerTwo)
+        
+        let playerThree = playerListViewModel.createPlayerWith(name: nameThree)
+        playerListViewModel.addPlayerToPlayerList(player: playerThree)
+        
+        // when
+        playerListViewModel.deletePlayer(playerToDelete: playerThree)
         
         // then
         XCTAssertEqual(playerListModel.playerList, [PlayerModel(name: "Kevin"), PlayerModel(name: "Lisa")])
