@@ -24,10 +24,3 @@ extension PlayerModel: Equatable {
     }
 }
 
-extension PlayerModel: Hashable {
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(name)
-        hasher.combine(uuid)
-    }
-}
-

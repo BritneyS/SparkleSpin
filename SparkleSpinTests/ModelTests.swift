@@ -150,6 +150,6 @@ class ModelTests: XCTestCase {
         
         // then
         guard let playerArray = playerListModel.playerList else { return }
-        XCTAssertEqual(Set(playerArray.map { $0.name }), Set(["Kevin", "Lisa"]))
+        XCTAssertEqual(playerArray.map { $0.name }, ["Kevin", "Lisa"])
     }
 }
