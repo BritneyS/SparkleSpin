@@ -11,7 +11,6 @@ import UIKit
 class PlayerViewController: UIViewController {
     
     @IBOutlet weak var playerTableView: UITableView!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
