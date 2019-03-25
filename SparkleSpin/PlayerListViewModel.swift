@@ -28,10 +28,10 @@ class PlayerListViewModel {
     }
     
     func deletePlayer(playerToDelete: PlayerModel) {
-        for (index, player) in playerListModel.playerList?.enumerated() ?? [].enumerated() {
-            if player == playerToDelete {
-                playerListModel.playerList?.remove(at: index)
-            }
+        guard let playerDeleteIndex = playerListModel.playerList?.firstIndex(where: { $0 == playerToDelete }) else {
+            print("No such player")
+            return
         }
+        playerListModel.playerList?.remove(at: playerDeleteIndex)
     }
 }

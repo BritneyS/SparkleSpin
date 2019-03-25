@@ -14,7 +14,7 @@ class PlayerModel {
     
     init(name: String?) {
         self.name = name
-        self.uuid = NSUUID().uuidString
+        self.uuid = UUID().uuidString
     }
 }
 

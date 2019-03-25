@@ -61,7 +61,7 @@ class ModelTests: XCTestCase {
         playerListViewModel.addPlayerToPlayerList(player: playerOne)
         
         // then
-        XCTAssertEqual(playerListModel.playerList?[0].name, "Kevin")
+        XCTAssertEqual(playerListModel.playerList?.first?.name, "Kevin")
     }
     
     func testAddAnotherPlayerToPlayerList() {
