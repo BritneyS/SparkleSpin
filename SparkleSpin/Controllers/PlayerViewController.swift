@@ -17,6 +17,7 @@ class PlayerViewController: UIViewController {
         setNavigationBarTitle()
         registerNib()
         setupTableView()
+        setAddBarButtonItem()
     
     }
     
@@ -37,6 +38,11 @@ class PlayerViewController: UIViewController {
     func registerNib() {
         let entryCell = UINib(nibName: NibID.entryCell, bundle: nil)
         playerTableView.register(entryCell, forCellReuseIdentifier: CellID.entryCell)
+    }
+    
+    func setAddBarButtonItem() {
+        let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
+        navigationItem.rightBarButtonItem = addBarButtonItem
     }
 }
 
