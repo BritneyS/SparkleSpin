@@ -58,6 +58,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="entryTextField" destination="5Ve-R2-0zQ" id="Eet-uo-tbK"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>

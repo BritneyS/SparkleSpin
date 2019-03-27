@@ -6,9 +6,9 @@
 //  Copyright © 2019 Britney Smith. All rights reserved.
 //
 
-class PlayerListViewModel {
+struct PlayerListViewModel {
     
-    private let playerListModel: PlayerListModel
+    private let playerListModel: PlayerListModel?
     var nameString: String? = nil
     
     init(playerListModel: PlayerListModel) {
@@ -20,18 +20,18 @@ class PlayerListViewModel {
     }
     
     func addPlayerToPlayerList(player: PlayerModel) {
-        playerListModel.playerList?.append(player)
+        playerListModel?.playerList?.append(player)
     }
     
     func getPlayerList() -> [PlayerModel] {
-        return playerListModel.playerList ?? []
+        return playerListModel?.playerList ?? []
     }
     
     func deletePlayer(playerToDelete: PlayerModel) {
-        guard let playerDeleteIndex = playerListModel.playerList?.firstIndex(where: { $0 == playerToDelete }) else {
+        guard let playerDeleteIndex = playerListModel?.playerList?.firstIndex(where: { $0 == playerToDelete }) else {
             print("No such player")
             return
         }
-        playerListModel.playerList?.remove(at: playerDeleteIndex)
+        playerListModel?.playerList?.remove(at: playerDeleteIndex)
     }
 }
