@@ -51,12 +51,19 @@ class PlayerViewController: UIViewController {
     }
     
     @objc func addPlayerCell() {
-        playerList.append(PlayerModel(name: "James"))
+        
+        let currentIndexPath = IndexPath(row: playerList.count - 1, section: 0)
+        let currentCell = playerTableView.cellForRow(at: currentIndexPath) as? EntryCell
+        playerList.append(PlayerModel(name: currentCell?.entryTextField.text))
         playerTableView.beginUpdates()
         //let playerToAdd = playerListViewModel.createPlayerWith(name: "cell entry name")
         //playerListViewModel.addPlayerToPlayerList(player: playerToAdd)
         playerTableView.insertRows(at: [IndexPath(row: playerList.count - 1, section: 0)], with: .bottom)
+        //playerTableView.visibleCells.count
         playerTableView.endUpdates()
+        for player in playerList {
+            print("🐶 \(player.name)")
+        }
     }
 }
 
@@ -78,6 +85,15 @@ extension PlayerViewController: UITableViewDataSource {
         
         //return playerListViewModel.getPlayerList().count
         return playerList.count
+        
+//        if playerList.count == 0 {
+//            print("🐶 first cell")
+//            return 1
+//        } else {
+//
+//            print("😀 next cell")
+//            return playerList.count
+//        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
