@@ -16,7 +16,6 @@ class PlayerViewController: UIViewController {
         return PlayerListViewModel(playerListModel: PlayerListModel(playerList: []))
     }()
     
-    //var playerList: [PlayerModel] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBarTitle()
@@ -54,13 +53,10 @@ class PlayerViewController: UIViewController {
         
         let currentIndexPath = IndexPath(row: playerListViewModel.getPlayerList().count - 1, section: 0)
         let currentCell = playerTableView.cellForRow(at: currentIndexPath) as? EntryCell
-        //playerList.append(PlayerModel(name: currentCell?.entryTextField.text))
-        //guard let currentCellText = currentCell?.entryTextField.text else { return }
         let playerToAdd = playerListViewModel.createPlayerWith(name: currentCell?.entryTextField.text ?? "")
         playerListViewModel.addPlayerToPlayerList(player: playerToAdd)
         print("🍕 Datasource count: \(playerListViewModel.getPlayerList().count)")
         playerTableView.beginUpdates()
-        //playerTableView.insertRows(at: [IndexPath(row: playerList.count - 1, section: 0)], with: .bottom)
         playerTableView.insertRows(at: [IndexPath(row: playerListViewModel.getPlayerList().count - 1, section: 0)], with: .bottom)
         playerTableView.endUpdates()
         for player in playerListViewModel.getPlayerList() {
@@ -79,23 +75,8 @@ extension PlayerViewController: UITableViewDelegate {
 extension PlayerViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if playerListViewModel.getPlayerList().count == 0 {
-//            return 1
-//        } else {
-//            return playerListViewModel.getPlayerList().count
-//        }
         print("🐶 Datasource count: \(playerListViewModel.getPlayerList().count)")
         return playerListViewModel.getPlayerList().count
-        //return playerList.count
-        
-//        if playerList.count == 0 {
-//            print("🐶 first cell")
-//            return 1
-//        } else {
-//
-//            print("😀 next cell")
-//            return playerList.count
-//        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
