@@ -52,16 +52,17 @@ class PlayerViewController: UIViewController {
     
     @objc func addPlayerCell() {
         
-        let currentIndexPath = IndexPath(row: playerList.count - 1, section: 0)
+        let currentIndexPath = IndexPath(row: playerListViewModel.getPlayerList().count - 1, section: 0)
         let currentCell = playerTableView.cellForRow(at: currentIndexPath) as? EntryCell
-        playerList.append(PlayerModel(name: currentCell?.entryTextField.text))
+        //playerList.append(PlayerModel(name: currentCell?.entryTextField.text))
+        guard let currentCellText = currentCell?.entryTextField.text else { return }
+        let playerToAdd = playerListViewModel.createPlayerWith(name: currentCellText)
+        playerListViewModel.addPlayerToPlayerList(player: playerToAdd)
         playerTableView.beginUpdates()
-        //let playerToAdd = playerListViewModel.createPlayerWith(name: "cell entry name")
-        //playerListViewModel.addPlayerToPlayerList(player: playerToAdd)
-        playerTableView.insertRows(at: [IndexPath(row: playerList.count - 1, section: 0)], with: .bottom)
-        //playerTableView.visibleCells.count
+        //playerTableView.insertRows(at: [IndexPath(row: playerList.count - 1, section: 0)], with: .bottom)
+        playerTableView.insertRows(at: [IndexPath(row: playerListViewModel.getPlayerList().count - 1, section: 0)], with: .bottom)
         playerTableView.endUpdates()
-        for player in playerList {
+        for player in playerListViewModel.getPlayerList() {
             print("🐶 \(player.name)")
         }
     }
@@ -82,9 +83,9 @@ extension PlayerViewController: UITableViewDataSource {
 //        } else {
 //            return playerListViewModel.getPlayerList().count
 //        }
-        
-        //return playerListViewModel.getPlayerList().count
-        return playerList.count
+        print("🐶 Datasource count: \(playerListViewModel.getPlayerList().count)")
+        return playerListViewModel.getPlayerList().count
+        //return playerList.count
         
 //        if playerList.count == 0 {
 //            print("🐶 first cell")

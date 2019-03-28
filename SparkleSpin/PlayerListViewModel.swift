@@ -6,7 +6,7 @@
 //  Copyright © 2019 Britney Smith. All rights reserved.
 //
 
-struct PlayerListViewModel {
+class PlayerListViewModel {
     
     private let playerListModel: PlayerListModel?
     var nameString: String? = nil
