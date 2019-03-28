@@ -16,7 +16,7 @@ class PlayerViewController: UIViewController {
         return PlayerListViewModel(playerListModel: PlayerListModel(playerList: []))
     }()
     
-    var playerList: [PlayerModel] = []
+    //var playerList: [PlayerModel] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBarTitle()
@@ -55,9 +55,10 @@ class PlayerViewController: UIViewController {
         let currentIndexPath = IndexPath(row: playerListViewModel.getPlayerList().count - 1, section: 0)
         let currentCell = playerTableView.cellForRow(at: currentIndexPath) as? EntryCell
         //playerList.append(PlayerModel(name: currentCell?.entryTextField.text))
-        guard let currentCellText = currentCell?.entryTextField.text else { return }
-        let playerToAdd = playerListViewModel.createPlayerWith(name: currentCellText)
+        //guard let currentCellText = currentCell?.entryTextField.text else { return }
+        let playerToAdd = playerListViewModel.createPlayerWith(name: currentCell?.entryTextField.text ?? "")
         playerListViewModel.addPlayerToPlayerList(player: playerToAdd)
+        print("🍕 Datasource count: \(playerListViewModel.getPlayerList().count)")
         playerTableView.beginUpdates()
         //playerTableView.insertRows(at: [IndexPath(row: playerList.count - 1, section: 0)], with: .bottom)
         playerTableView.insertRows(at: [IndexPath(row: playerListViewModel.getPlayerList().count - 1, section: 0)], with: .bottom)
