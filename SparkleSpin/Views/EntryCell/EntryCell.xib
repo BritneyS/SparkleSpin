@@ -60,6 +60,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="entryTextField" destination="5Ve-R2-0zQ" id="Eet-uo-tbK"/>
+                <outlet property="underlineView" destination="uNh-YA-1XA" id="oz4-EB-PqO"/>
             </connections>
         </tableViewCell>
     </objects>
