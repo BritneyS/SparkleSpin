@@ -53,12 +53,17 @@ class PlayerViewController: UIViewController {
         
         let currentIndexPath = IndexPath(row: playerListViewModel.getPlayerList().count - 1, section: 0)
         let currentCell = playerTableView.cellForRow(at: currentIndexPath) as? EntryCell
-        let playerToAdd = playerListViewModel.createPlayerWith(name: currentCell?.entryTextField.text ?? "")
+        let nameEntry = currentCell?.entryTextField.text ?? ""
+        let playerToAdd = playerListViewModel.createPlayerWith(name: nameEntry)
+        
         playerListViewModel.addPlayerToPlayerList(player: playerToAdd)
         print("🍕 Datasource count: \(playerListViewModel.getPlayerList().count)")
+        
         playerTableView.beginUpdates()
-        playerTableView.insertRows(at: [IndexPath(row: playerListViewModel.getPlayerList().count - 1, section: 0)], with: .bottom)
+        let nextRowIndexPath = IndexPath(row: playerListViewModel.getPlayerList().count - 1, section: 0)
+        playerTableView.insertRows(at: [nextRowIndexPath], with: .bottom)
         playerTableView.endUpdates()
+        
         for player in playerListViewModel.getPlayerList() {
             print("🐶 \(player.name)")
         }
