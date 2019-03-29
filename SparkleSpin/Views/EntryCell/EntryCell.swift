@@ -32,8 +32,12 @@ class EntryCell: UITableViewCell {
         case .selected:
             entryTextField.isUserInteractionEnabled = false
             entryTextField.textColor = ThemeColor.Light.primaryColor
-            self.contentView.backgroundColor = ThemeColor.Light.accentColorOne
             underlineView.isHidden = true
+            
+            let backgroundView = UIView()
+            backgroundView.backgroundColor = ThemeColor.Light.accentColorOne
+            selectedBackgroundView = backgroundView
+            
         }
     }
 }
