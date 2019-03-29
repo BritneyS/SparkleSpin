@@ -75,6 +75,16 @@ extension PlayerViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(Constants.entryCellRowHeight)
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let selectedCell = tableView.cellForRow(at: indexPath) as? EntryCell else { fatalError("Fatal error: No cell") }
+        selectedCell.setCellStateTo(cellState: .selected)
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        guard let deselectedCell = tableView.cellForRow(at: indexPath) as? EntryCell else { fatalError("Fatal error: No cell") }
+        deselectedCell.setCellStateTo(cellState: .saved)
+    }
 }
 
 extension PlayerViewController: UITableViewDataSource {
@@ -87,7 +97,6 @@ extension PlayerViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let entryCell = tableView.dequeueReusableCell(withIdentifier: CellID.entryCell, for: indexPath) as? EntryCell else { fatalError("Fatal error: No cell") }
         entryCell.setCellStateTo(cellState: .entering)
-        entryCell.selectionStyle = .none
         return entryCell
     }
 }

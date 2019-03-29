@@ -11,6 +11,7 @@ import UIKit
 enum CellState {
     case entering
     case saved
+    case selected
 }
 
 class EntryCell: UITableViewCell {
@@ -27,6 +28,11 @@ class EntryCell: UITableViewCell {
         case .saved:
             entryTextField.isUserInteractionEnabled = false
             entryTextField.textColor = ThemeColor.Light.accentColorOne
+            underlineView.isHidden = true
+        case .selected:
+            entryTextField.isUserInteractionEnabled = false
+            entryTextField.textColor = ThemeColor.Light.primaryColor
+            self.contentView.backgroundColor = ThemeColor.Light.accentColorOne
             underlineView.isHidden = true
         }
     }
