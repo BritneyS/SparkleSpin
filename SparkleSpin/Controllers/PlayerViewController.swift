@@ -61,8 +61,6 @@ class PlayerViewController: UIViewController {
         
         playerTableView.beginUpdates()
         let nextRowIndexPath = IndexPath(row: playerListViewModel.getPlayerList().count - 1, section: 0)
-        let nextCell = playerTableView.cellForRow(at: nextRowIndexPath) as? EntryCell
-        nextCell?.setCellStateTo(cellState: .entering)
         playerTableView.insertRows(at: [nextRowIndexPath], with: .bottom)
         playerTableView.endUpdates()
         
@@ -88,6 +86,7 @@ extension PlayerViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let entryCell = tableView.dequeueReusableCell(withIdentifier: CellID.entryCell, for: indexPath) as? EntryCell else { fatalError("Fatal error: No cell") }
+        entryCell.setCellStateTo(cellState: .entering)
         entryCell.selectionStyle = .none
         return entryCell
     }
