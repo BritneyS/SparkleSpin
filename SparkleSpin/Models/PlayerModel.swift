@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PlayerModel {
+struct PlayerModel {
     var name: String?
     var uuid: String?
     

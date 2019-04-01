@@ -35,6 +35,8 @@
 		064A01CA221B5C0E001AE3AF /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A01C9221B5C0E001AE3AF /* Font.swift */; };
 		064A01CC221C6388001AE3AF /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 064A01CB221C6388001AE3AF /* Icons.xcassets */; };
 		064A01CE221C77A3001AE3AF /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A01CD221C77A3001AE3AF /* Image.swift */; };
+		066DBE97225292CA00534054 /* PlayerViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066DBE96225292CA00534054 /* PlayerViewModelItem.swift */; };
+		066DBE992252940200534054 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066DBE982252940200534054 /* PlayerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		064A01C9221B5C0E001AE3AF /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		064A01CB221C6388001AE3AF /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		064A01CD221C77A3001AE3AF /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		066DBE96225292CA00534054 /* PlayerViewModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModelItem.swift; sourceTree = "<group>"; };
+		066DBE982252940200534054 /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,8 @@
 			children = (
 				060C4D1E22271E6800B0BB07 /* PlayerListViewModel.swift */,
 				060C4D222227556600B0BB07 /* ChoreViewModel.swift */,
+				066DBE96225292CA00534054 /* PlayerViewModelItem.swift */,
+				066DBE982252940200534054 /* PlayerViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -344,6 +350,7 @@
 				064A01BE221B53AD001AE3AF /* ThemeColor.swift in Sources */,
 				0601DDDE222EF45D00CFBDE3 /* HomeViewController.swift in Sources */,
 				060C4D1C222710C100B0BB07 /* PlayerModel.swift in Sources */,
+				066DBE992252940200534054 /* PlayerViewModel.swift in Sources */,
 				060C4D21222754D400B0BB07 /* ChoreModel.swift in Sources */,
 				0601DE2F2242913500CFBDE3 /* PlayerListModel.swift in Sources */,
 				0601DE24223DBC4F00CFBDE3 /* Identifier.swift in Sources */,
@@ -351,6 +358,7 @@
 				0601DDE2222EFA7F00CFBDE3 /* LightButton.swift in Sources */,
 				0601DE21223DBA1500CFBDE3 /* PlayerViewController.swift in Sources */,
 				064A01CE221C77A3001AE3AF /* Image.swift in Sources */,
+				066DBE97225292CA00534054 /* PlayerViewModelItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
