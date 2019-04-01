@@ -10,6 +10,7 @@ import UIKit
 
 class EntryCell: UITableViewCell {
 
-   
+    @IBOutlet weak var entryTextField: CustomTextField!
+    
     
 }

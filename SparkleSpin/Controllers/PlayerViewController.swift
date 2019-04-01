@@ -17,7 +17,7 @@ class PlayerViewController: UIViewController {
         setNavigationBarTitle()
         registerNib()
         setupTableView()
-    
+        addBarButtonItem()
     }
     
     private func setNavigationBarTitle() {
@@ -32,6 +32,11 @@ class PlayerViewController: UIViewController {
         playerTableView.rowHeight = UITableView.automaticDimension
         playerTableView.estimatedRowHeight = CGFloat(Constants.estimatedRowHeight)
         playerTableView.tableFooterView = UIView()
+    }
+    
+    private func addBarButtonItem() {
+        let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
+        navigationItem.rightBarButtonItem = addBarButtonItem
     }
 
 }
