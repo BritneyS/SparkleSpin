@@ -21,7 +21,7 @@ class PlayerViewController: UIViewController {
     }
     
     private func setNavigationBarTitle() {
-        navigationItem.title = "Choose Players!"
+        navigationItem.title = "Add Players!"
     }
     
     private func setupTableView() {
