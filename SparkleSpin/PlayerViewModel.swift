@@ -14,6 +14,9 @@ import Foundation
 import UIKit
 class PlayerViewModel: NSObject {
     var items = [PlayerViewModelItem]()
+    var selectedItems: [PlayerViewModelItem] {
+        return items.filter { return $0.isSaved }
+    }
     
     override init() {
         items = nameArray.map { PlayerViewModelItem(player: $0) }
@@ -32,6 +35,8 @@ extension PlayerViewModel: UITableViewDataSource {
         
         if items[indexPath.row].isSaved {
             tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
+            // test: selected items saved on cell redraw
+            print(selectedItems.map { $0.name })
         } else {
             tableView.deselectRow(at: indexPath, animated: false)
         }
