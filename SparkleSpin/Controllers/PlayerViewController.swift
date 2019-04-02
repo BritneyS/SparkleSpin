@@ -11,6 +11,7 @@ import UIKit
 class PlayerViewController: UIViewController {
     
     @IBOutlet weak var playerTableView: UITableView!
+    var playerViewModel = PlayerViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,21 +33,22 @@ class PlayerViewController: UIViewController {
         playerTableView.rowHeight = UITableView.automaticDimension
         playerTableView.estimatedRowHeight = CGFloat(Constants.estimatedRowHeight)
         playerTableView.tableFooterView = UIView()
+        playerTableView.allowsMultipleSelection = true
     }
     
     private func addBarButtonItem() {
         let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
         navigationItem.rightBarButtonItem = addBarButtonItem
     }
-
-}
-
-extension PlayerViewController: UITableViewDataSource, UITableViewDelegate {
     
-    func registerNib() {
+    private func registerNib() {
         let entryCell = UINib(nibName: NibID.entryCell, bundle: nil)
         playerTableView.register(entryCell, forCellReuseIdentifier: CellID.entryCell)
     }
+
+}
+
+extension PlayerViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -56,10 +58,20 @@ extension PlayerViewController: UITableViewDataSource, UITableViewDelegate {
         guard let entryCell = tableView.dequeueReusableCell(withIdentifier: CellID.entryCell, for: indexPath) as? EntryCell else { fatalError("Fatal error: No cell") }
         return entryCell
     }
+
+}
+
+extension PlayerViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(Constants.entryCellRowHeight)
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        playerViewModel.items[indexPath.row].isSaved = true
+    }
     
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        playerViewModel.items[indexPath.row].isSaved = false
+    }
 }
