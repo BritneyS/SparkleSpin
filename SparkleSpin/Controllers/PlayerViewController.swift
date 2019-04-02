@@ -26,7 +26,7 @@ class PlayerViewController: UIViewController {
     }
     
     private func setupTableView() {
-        playerTableView.dataSource = self
+        playerTableView.dataSource = playerViewModel
         playerTableView.delegate = self
         playerTableView.backgroundColor = ThemeColor.Light.primaryColor
         playerTableView.separatorStyle = .none
@@ -44,19 +44,6 @@ class PlayerViewController: UIViewController {
     private func registerNib() {
         let entryCell = UINib(nibName: NibID.entryCell, bundle: nil)
         playerTableView.register(entryCell, forCellReuseIdentifier: CellID.entryCell)
-    }
-
-}
-
-extension PlayerViewController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let entryCell = tableView.dequeueReusableCell(withIdentifier: CellID.entryCell, for: indexPath) as? EntryCell else { fatalError("Fatal error: No cell") }
-        return entryCell
     }
 
 }
