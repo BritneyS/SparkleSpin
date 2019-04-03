@@ -18,9 +18,18 @@ class EntryCell: UITableViewCell {
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
+        if self.isSelected == selected { return }
         super.setSelected(selected, animated: animated)
         
-        accessoryType = selected ? .checkmark : .none
+        if selected {
+            accessoryType = .checkmark
+            let backgroundView = UIView()
+            backgroundView.backgroundColor = ThemeColor.Light.accentColorOne
+            selectedBackgroundView = backgroundView
+            entryTextField.textColor = ThemeColor.Light.primaryColor
+        } else {
+            accessoryType = .none
+            entryTextField.textColor = ThemeColor.Light.secondaryColor
+        }
     }
-    
 }
