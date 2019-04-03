@@ -40,6 +40,7 @@ class EntryCell: UITableViewCell {
         switch state {
         case .entering:
             accessoryType = .none
+            entryTextField.isUserInteractionEnabled = true
             entryTextField.textColor = ThemeColor.Light.secondaryColor
             underlineView.isHidden = false
         case .selected:
@@ -47,6 +48,7 @@ class EntryCell: UITableViewCell {
             let backgroundView = UIView()
             backgroundView.backgroundColor = ThemeColor.Light.accentColorOne
             selectedBackgroundView = backgroundView
+            entryTextField.isUserInteractionEnabled = false
             entryTextField.textColor = ThemeColor.Light.primaryColor
             underlineView.isHidden = true
         }
