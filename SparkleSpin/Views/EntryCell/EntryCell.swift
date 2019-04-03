@@ -9,6 +9,7 @@
 enum CellState {
     case entering
     case selected
+    case saved
 }
 
 import UIKit
@@ -35,7 +36,7 @@ class EntryCell: UITableViewCell {
         }
     }
     
-    private func setCellStateWith(state: CellState) {
+    func setCellStateWith(state: CellState) {
         
         switch state {
         case .entering:
@@ -43,6 +44,10 @@ class EntryCell: UITableViewCell {
             entryTextField.isUserInteractionEnabled = true
             entryTextField.textColor = ThemeColor.Light.secondaryColor
             underlineView.isHidden = false
+        case .saved:
+            entryTextField.isUserInteractionEnabled = false
+            entryTextField.textColor = ThemeColor.Light.accentColorOne
+            underlineView.isHidden = true
         case .selected:
             accessoryType = .checkmark
             let backgroundView = UIView()

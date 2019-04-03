@@ -41,9 +41,18 @@ class PlayerViewModel: NSObject {
 //    override init() {
 //        items = nameArray.map { PlayerViewModelItem(player: $0) }
 //    }
-    
+    var savedItems = [PlayerModel]()
     override init() {
         items = nameArray.map { $0 }
+    }
+    
+    func createPlayerWith(name: String) -> PlayerModel {
+        return PlayerModel(name: name)
+    }
+    
+    func addPlayerToSavedList(player: inout PlayerModel) {
+        player.isSaved = true
+        savedItems.append(player)
     }
 }
 
@@ -63,6 +72,12 @@ extension PlayerViewModel: UITableViewDataSource {
             print(selectedItems.map { $0.name })
         } else {
             tableView.deselectRow(at: indexPath, animated: false)
+        }
+        
+        if items[indexPath.row].isSaved {
+            entryCell.setCellStateWith(state: .saved)
+        } else {
+            entryCell.setCellStateWith(state: .entering)
         }
         return entryCell
     }

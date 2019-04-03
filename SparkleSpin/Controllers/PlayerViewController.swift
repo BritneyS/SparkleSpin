@@ -50,6 +50,8 @@ class PlayerViewController: UIViewController {
         let currentIndexPath = IndexPath(row: playerViewModel.items.count - 1, section: 0)
         let currentCell = playerTableView.cellForRow(at: currentIndexPath) as? EntryCell
         let nameEntry = currentCell?.entryTextField.text ?? ""
+        var playerToAdd = playerViewModel.createPlayerWith(name: nameEntry)
+        playerViewModel.addPlayerToSavedList(player: &playerToAdd)
         
     }
 
