@@ -16,6 +16,8 @@ import UIKit
 class EntryCell: UITableViewCell {
 
     @IBOutlet weak var entryTextField: CustomTextField!
+    @IBOutlet weak var underlineView: UIView!
+    
     var item: PlayerViewModelItem? {
         didSet {
             entryTextField.text = item?.name
@@ -39,12 +41,14 @@ class EntryCell: UITableViewCell {
         case .entering:
             accessoryType = .none
             entryTextField.textColor = ThemeColor.Light.secondaryColor
+            underlineView.isHidden = false
         case .selected:
             accessoryType = .checkmark
             let backgroundView = UIView()
             backgroundView.backgroundColor = ThemeColor.Light.accentColorOne
             selectedBackgroundView = backgroundView
             entryTextField.textColor = ThemeColor.Light.primaryColor
+            underlineView.isHidden = true
         }
     }
 }
