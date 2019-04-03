@@ -6,6 +6,11 @@
 //  Copyright © 2019 Britney Smith. All rights reserved.
 //
 
+enum CellState {
+    case entering
+    case selected
+}
+
 import UIKit
 
 class EntryCell: UITableViewCell {
@@ -22,14 +27,24 @@ class EntryCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         
         if selected {
+            setCellStateWith(state: .selected)
+        } else {
+            setCellStateWith(state: .entering)
+        }
+    }
+    
+    private func setCellStateWith(state: CellState) {
+        
+        switch state {
+        case .entering:
+            accessoryType = .none
+            entryTextField.textColor = ThemeColor.Light.secondaryColor
+        case .selected:
             accessoryType = .checkmark
             let backgroundView = UIView()
             backgroundView.backgroundColor = ThemeColor.Light.accentColorOne
             selectedBackgroundView = backgroundView
             entryTextField.textColor = ThemeColor.Light.primaryColor
-        } else {
-            accessoryType = .none
-            entryTextField.textColor = ThemeColor.Light.secondaryColor
         }
     }
 }
