@@ -18,7 +18,7 @@ class EntryCell: UITableViewCell {
     @IBOutlet weak var entryTextField: CustomTextField!
     @IBOutlet weak var underlineView: UIView!
     
-    var item: PlayerViewModelItem? {
+    var item: PlayerModel? {
         didSet {
             entryTextField.text = item?.name
         }

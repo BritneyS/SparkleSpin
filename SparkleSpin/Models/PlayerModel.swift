@@ -11,6 +11,7 @@ import Foundation
 struct PlayerModel {
     var name: String?
     var uuid: String?
+    var isSaved = false
     
     init(name: String?) {
         self.name = name

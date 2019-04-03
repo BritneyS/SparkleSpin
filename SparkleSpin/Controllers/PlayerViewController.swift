@@ -11,7 +11,7 @@ import UIKit
 class PlayerViewController: UIViewController {
     
     @IBOutlet weak var playerTableView: UITableView!
-    var playerViewModel = PlayerViewModel()
+    let playerViewModel = PlayerViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,13 +37,20 @@ class PlayerViewController: UIViewController {
     }
     
     private func addBarButtonItem() {
-        let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
+        let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addPlayer))
         navigationItem.rightBarButtonItem = addBarButtonItem
     }
     
     private func registerNib() {
         let entryCell = UINib(nibName: NibID.entryCell, bundle: nil)
         playerTableView.register(entryCell, forCellReuseIdentifier: CellID.entryCell)
+    }
+    
+    @objc private func addPlayer() {
+        let currentIndexPath = IndexPath(row: playerViewModel.items.count - 1, section: 0)
+        let currentCell = playerTableView.cellForRow(at: currentIndexPath) as? EntryCell
+        let nameEntry = currentCell?.entryTextField.text ?? ""
+        
     }
 
 }

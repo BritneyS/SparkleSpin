@@ -13,13 +13,37 @@ let nameArray = [PlayerModel(name: "Nicole"),
 import Foundation
 import UIKit
 class PlayerViewModel: NSObject {
-    var items = [PlayerViewModelItem]()
-    var savedItems: [PlayerViewModelItem] {
+    var player: PlayerModel?
+    var isSaved = false
+    var name: String {
+        return player?.name ?? ""
+    }
+    
+    
+    //var playerViewModelItem: PlayerViewModelItem? // = PlayerViewModelItem(player: nil, name: nil)
+    //var items = [PlayerViewModelItem]()
+    var items = [PlayerModel]()
+//    var savedItems: [PlayerViewModelItem] {
+//        return items.filter { return $0.isSaved }
+//    }
+    var savedItems: [PlayerModel] {
         return items.filter { return $0.isSaved }
     }
     
+//   init(playerModelItem: PlayerViewModelItem?) {
+//        self.playerViewModelItem = playerModelItem
+//    }
+    
+//    func getUserEntryInPlayerViewModelItem(entry: String) {
+//        return playerViewModelItem.
+//    }
+    
+//    override init() {
+//        items = nameArray.map { PlayerViewModelItem(player: $0) }
+//    }
+    
     override init() {
-        items = nameArray.map { PlayerViewModelItem(player: $0) }
+        items = nameArray.map { $0 }
     }
 }
 
