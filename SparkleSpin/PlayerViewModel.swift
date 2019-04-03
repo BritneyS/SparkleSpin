@@ -14,7 +14,7 @@ import Foundation
 import UIKit
 class PlayerViewModel: NSObject {
     var player: PlayerModel?
-    var isSaved = false
+    //var isSaved = false
     var name: String {
         return player?.name ?? ""
     }
@@ -26,8 +26,8 @@ class PlayerViewModel: NSObject {
 //    var savedItems: [PlayerViewModelItem] {
 //        return items.filter { return $0.isSaved }
 //    }
-    var savedItems: [PlayerModel] {
-        return items.filter { return $0.isSaved }
+    var selectedItems: [PlayerModel] {
+        return items.filter { return $0.isSelected }
     }
     
 //   init(playerModelItem: PlayerViewModelItem?) {
@@ -57,10 +57,10 @@ extension PlayerViewModel: UITableViewDataSource {
         guard let entryCell = tableView.dequeueReusableCell(withIdentifier: CellID.entryCell, for: indexPath) as? EntryCell else { fatalError("Fatal error: No cell") }
         entryCell.item = items[indexPath.row]
         
-        if items[indexPath.row].isSaved {
+        if items[indexPath.row].isSelected {
             tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
             // test: selected items saved on cell redraw
-            print(savedItems.map { $0.name })
+            print(selectedItems.map { $0.name })
         } else {
             tableView.deselectRow(at: indexPath, animated: false)
         }

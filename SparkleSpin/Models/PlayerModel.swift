@@ -12,6 +12,7 @@ struct PlayerModel {
     var name: String?
     var uuid: String?
     var isSaved = false
+    var isSelected = false
     
     init(name: String?) {
         self.name = name

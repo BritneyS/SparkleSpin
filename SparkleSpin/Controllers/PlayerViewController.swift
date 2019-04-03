@@ -62,10 +62,10 @@ extension PlayerViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        playerViewModel.items[indexPath.row].isSaved = true
+        playerViewModel.items[indexPath.row].isSelected = true
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        playerViewModel.items[indexPath.row].isSaved = false
+        playerViewModel.items[indexPath.row].isSelected = false
     }
 }
