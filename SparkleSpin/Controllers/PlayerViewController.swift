@@ -12,13 +12,18 @@ class PlayerViewController: UIViewController {
     
     @IBOutlet weak var playerTableView: UITableView!
     let playerViewModel = PlayerViewModel()
+    
+    @IBOutlet weak var playerEntryTextField: CustomTextField!
+    
+    @IBOutlet weak var addPlayerButton: LightButton! 
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBarTitle()
         registerNib()
         setupTableView()
-        addBarButtonItem()
+        addDoneBarButtonItem()
     }
     
     private func setNavigationBarTitle() {
@@ -36,8 +41,8 @@ class PlayerViewController: UIViewController {
         playerTableView.allowsMultipleSelection = true
     }
     
-    private func addBarButtonItem() {
-        let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addPlayer))
+    private func addDoneBarButtonItem() {
+        let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(addPlayer))
         navigationItem.rightBarButtonItem = addBarButtonItem
     }
     

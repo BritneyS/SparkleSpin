@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WW7-XB-d2J">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WW7-XB-d2J">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -40,7 +40,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="LIBRARY3AM" family="LIBRARY 3 AM" pointSize="32"/>
                                 <state key="normal" title="Start!">
-                                    <color key="titleColor" name="DarkColor"/>
+                                    <color key="titleColor" name="Violet"/>
                                 </state>
                                 <connections>
                                     <action selector="startButtonIsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V4m-cD-5pY"/>
@@ -72,21 +72,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ae2-XG-8uP">
-                                <rect key="frame" x="10" y="88" width="355" height="690"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JXC-9E-TP7" userLabel="Entry Stack View">
+                                <rect key="frame" x="20" y="108" width="335" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JRk-Cl-Vc2" customClass="CustomTextField" customModule="SparkleSpin" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="SSI-03-lxe"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DG-YX-mY4" customClass="LightButton" customModule="SparkleSpin" customModuleProvider="target">
+                                        <rect key="frame" x="295" y="0.0" width="40" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="YAF-kd-1xf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="35"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" name="Violet"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eTF-b3-sOn">
+                                <rect key="frame" x="0.0" y="178" width="375" height="634"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ae2-XG-8uP">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="634"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" name="LightColor"/>
                         <constraints>
-                            <constraint firstItem="fOo-al-RXF" firstAttribute="trailing" secondItem="Ae2-XG-8uP" secondAttribute="trailing" constant="10" id="8ia-UE-BSU"/>
-                            <constraint firstItem="Ae2-XG-8uP" firstAttribute="leading" secondItem="fOo-al-RXF" secondAttribute="leading" constant="10" id="kRb-Ll-168"/>
-                            <constraint firstItem="fOo-al-RXF" firstAttribute="bottom" secondItem="Ae2-XG-8uP" secondAttribute="bottom" id="r31-Jk-MdS"/>
-                            <constraint firstItem="Ae2-XG-8uP" firstAttribute="top" secondItem="fOo-al-RXF" secondAttribute="top" id="vZK-iW-BcA"/>
+                            <constraint firstItem="eTF-b3-sOn" firstAttribute="top" secondItem="JXC-9E-TP7" secondAttribute="bottom" constant="20" id="9IT-9i-ejO"/>
+                            <constraint firstItem="fOo-al-RXF" firstAttribute="trailing" secondItem="JXC-9E-TP7" secondAttribute="trailing" constant="20" id="A73-D8-HqY"/>
+                            <constraint firstAttribute="trailing" secondItem="eTF-b3-sOn" secondAttribute="trailing" id="CGG-QT-87Q"/>
+                            <constraint firstItem="JXC-9E-TP7" firstAttribute="leading" secondItem="fOo-al-RXF" secondAttribute="leading" constant="20" id="EOR-rQ-eAr"/>
+                            <constraint firstAttribute="bottom" secondItem="eTF-b3-sOn" secondAttribute="bottom" id="eF9-8H-eEI"/>
+                            <constraint firstItem="eTF-b3-sOn" firstAttribute="leading" secondItem="fOo-al-RXF" secondAttribute="leading" id="feu-l6-ewd"/>
+                            <constraint firstItem="JXC-9E-TP7" firstAttribute="top" secondItem="fOo-al-RXF" secondAttribute="top" constant="20" id="zLg-MW-VY0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fOo-al-RXF"/>
                     </view>
                     <connections>
+                        <outlet property="addPlayerButton" destination="6DG-YX-mY4" id="zgE-gX-E65"/>
+                        <outlet property="playerEntryTextField" destination="JRk-Cl-Vc2" id="90l-No-4Un"/>
                         <outlet property="playerTableView" destination="Ae2-XG-8uP" id="elp-ky-kcC"/>
                     </connections>
                 </viewController>
@@ -116,11 +150,11 @@
     </scenes>
     <resources>
         <image name="logo-composite-dark" width="319" height="201"/>
-        <namedColor name="DarkColor">
-            <color red="0.10980392156862745" green="0.11764705882352941" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
         <namedColor name="LightColor">
             <color red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Violet">
+            <color red="0.38823529411764707" green="0.047058823529411764" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

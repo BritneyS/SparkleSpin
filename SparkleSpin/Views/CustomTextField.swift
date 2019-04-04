@@ -17,6 +17,9 @@ class CustomTextField: UITextField {
     }
     
     private func styleTextField() {
+        backgroundColor = .white
+        placeholder = "Enter here"
+        borderStyle = .none
         font = Font.wheelBodyFont
         tintColor = ThemeColor.Light.accentColorOne
     }
