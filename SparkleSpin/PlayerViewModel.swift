@@ -73,12 +73,6 @@ extension PlayerViewModel: UITableViewDataSource {
         } else {
             tableView.deselectRow(at: indexPath, animated: false)
         }
-        
-        if items[indexPath.row].isSaved {
-            entryCell.setCellStateWith(state: .saved)
-        } else {
-            entryCell.setCellStateWith(state: .entering)
-        }
         return entryCell
     }
     
