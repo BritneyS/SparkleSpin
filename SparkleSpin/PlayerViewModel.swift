@@ -6,19 +6,13 @@
 //  Copyright © 2019 Britney Smith. All rights reserved.
 //
 
-let nameArray = [PlayerModel(name: "Nicole"),
-                PlayerModel(name: "Jackson"),
-                PlayerModel(name: "Reese"),
-                PlayerModel(name: "Christina")]
 import Foundation
 import UIKit
+
 class PlayerViewModel: NSObject {
+    
     var items = [PlayerModel]()
 
-    override init() {
-        items = nameArray.map { $0 }
-    }
-    
     func createPlayerWith(name: String) -> PlayerModel {
         return PlayerModel(name: name)
     }
@@ -44,6 +38,7 @@ extension PlayerViewModel: UITableViewDataSource {
         } else {
             tableView.deselectRow(at: indexPath, animated: false)
         }
+        
         return entryCell
     }
     

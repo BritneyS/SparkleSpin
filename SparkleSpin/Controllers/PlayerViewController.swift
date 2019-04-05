@@ -15,6 +15,7 @@ class PlayerViewController: UIViewController {
     @IBOutlet weak var addPlayerButton: LightButton! 
     
     let playerViewModel = PlayerViewModel()
+    var doneBarButton: UIBarButtonItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,12 @@ class PlayerViewController: UIViewController {
         navigationItem.title = "Add Players!"
     }
     
+    private func addDoneBarButtonItem() {
+        doneBarButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: nil)
+        navigationItem.rightBarButtonItem = doneBarButton
+        doneBarButton?.isEnabled = false
+    }
+    
     private func setupTableView() {
         playerTableView.dataSource = playerViewModel
         playerTableView.delegate = self
@@ -36,11 +43,6 @@ class PlayerViewController: UIViewController {
         playerTableView.rowHeight = UITableView.automaticDimension
         playerTableView.estimatedRowHeight = CGFloat(Constants.estimatedRowHeight)
         playerTableView.tableFooterView = UIView()
-    }
-    
-    private func addDoneBarButtonItem() {
-        let doneBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: nil)
-        navigationItem.rightBarButtonItem = doneBarButtonItem
     }
     
     private func registerNib() {
@@ -66,6 +68,10 @@ class PlayerViewController: UIViewController {
         guard let playerEntryText = playerEntryTextField.text else { return }
         if !playerEntryText.isEmpty {
             addPlayerToList()
+            
+            if doneBarButton?.isEnabled == false {
+                doneBarButton?.isEnabled = true
+            }
             
             playerTableView.beginUpdates()
             let nextRowIndexPath = IndexPath(row: playerViewModel.items.count - 1, section: 0)
