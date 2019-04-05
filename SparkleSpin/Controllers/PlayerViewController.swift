@@ -50,18 +50,16 @@ class PlayerViewController: UIViewController {
         playerTableView.register(entryCell, forCellReuseIdentifier: CellID.entryCell)
     }
     
-    private func addPlayer() {
-        
-        
-    }
-    
-    @IBAction func userTappedAddButton(_ sender: LightButton) {
-        addPlayerButton.animateButton()
-        
+    private func addPlayerToList() {
         let nameEntry = playerEntryTextField.text ?? ""
         var playerToAdd = playerViewModel.createPlayerWith(name: nameEntry)
         playerViewModel.addPlayerToSavedList(player: &playerToAdd)
         playerEntryTextField.text? = ""
+    }
+    
+    @IBAction func userTappedAddButton(_ sender: LightButton) {
+        addPlayerButton.animateButton()
+        addPlayerToList()
         
         playerTableView.beginUpdates()
         let nextRowIndexPath = IndexPath(row: playerViewModel.items.count - 1, section: 0)
