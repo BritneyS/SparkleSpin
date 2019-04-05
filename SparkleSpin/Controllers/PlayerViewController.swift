@@ -42,7 +42,7 @@ class PlayerViewController: UIViewController {
     }
     
     private func addDoneBarButtonItem() {
-        let doneBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(addPlayer))
+        let doneBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: nil)
         navigationItem.rightBarButtonItem = doneBarButtonItem
     }
     
