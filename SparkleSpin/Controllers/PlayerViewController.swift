@@ -42,8 +42,8 @@ class PlayerViewController: UIViewController {
     }
     
     private func addDoneBarButtonItem() {
-        let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(addPlayer))
-        navigationItem.rightBarButtonItem = addBarButtonItem
+        let doneBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(addPlayer))
+        navigationItem.rightBarButtonItem = doneBarButtonItem
     }
     
     private func registerNib() {
