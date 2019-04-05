@@ -37,6 +37,7 @@
 		064A01CE221C77A3001AE3AF /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A01CD221C77A3001AE3AF /* Image.swift */; };
 		066DBE97225292CA00534054 /* PlayerViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066DBE96225292CA00534054 /* PlayerViewModelItem.swift */; };
 		066DBE992252940200534054 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066DBE982252940200534054 /* PlayerViewModel.swift */; };
+		06E9F4FD2256CF25000B2B8E /* CustomCellLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E9F4FC2256CF25000B2B8E /* CustomCellLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		064A01CD221C77A3001AE3AF /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		066DBE96225292CA00534054 /* PlayerViewModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModelItem.swift; sourceTree = "<group>"; };
 		066DBE982252940200534054 /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
+		06E9F4FC2256CF25000B2B8E /* CustomCellLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				0601DE27223EAE6C00CFBDE3 /* EntryCell */,
 				0601DDE1222EFA7F00CFBDE3 /* LightButton.swift */,
 				0601DE25223EA98800CFBDE3 /* CustomTextField.swift */,
+				06E9F4FC2256CF25000B2B8E /* CustomCellLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				060C4D21222754D400B0BB07 /* ChoreModel.swift in Sources */,
 				0601DE2F2242913500CFBDE3 /* PlayerListModel.swift in Sources */,
 				0601DE24223DBC4F00CFBDE3 /* Identifier.swift in Sources */,
+				06E9F4FD2256CF25000B2B8E /* CustomCellLabel.swift in Sources */,
 				060C4D1F22271E6800B0BB07 /* PlayerListViewModel.swift in Sources */,
 				0601DDE2222EFA7F00CFBDE3 /* LightButton.swift in Sources */,
 				0601DE21223DBA1500CFBDE3 /* PlayerViewController.swift in Sources */,

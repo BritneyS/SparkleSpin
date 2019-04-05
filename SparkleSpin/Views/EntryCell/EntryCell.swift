@@ -7,7 +7,6 @@
 //
 
 enum CellState {
-    case entering
     case selected
     case saved
 }
@@ -16,12 +15,12 @@ import UIKit
 
 class EntryCell: UITableViewCell {
 
-    @IBOutlet weak var entryTextField: CustomTextField!
-    @IBOutlet weak var underlineView: UIView!
+    @IBOutlet weak var entryCellLabel: CustomCellLabel!
+    
     
     var item: PlayerModel? {
         didSet {
-            entryTextField.text = item?.name
+            entryCellLabel.text = item?.name
         }
     }
     
@@ -32,30 +31,21 @@ class EntryCell: UITableViewCell {
         if selected {
             setCellStateWith(state: .selected)
         } else {
-            setCellStateWith(state: .entering)
+            setCellStateWith(state: .saved)
         }
     }
     
     func setCellStateWith(state: CellState) {
         
         switch state {
-        case .entering:
-            accessoryType = .none
-            entryTextField.isUserInteractionEnabled = true
-            entryTextField.textColor = ThemeColor.Light.secondaryColor
-            underlineView.isHidden = false
         case .saved:
-            entryTextField.isUserInteractionEnabled = false
-            entryTextField.textColor = ThemeColor.Light.accentColorOne
-            underlineView.isHidden = true
+            entryCellLabel.textColor = ThemeColor.Light.accentColorOne
         case .selected:
             accessoryType = .checkmark
             let backgroundView = UIView()
             backgroundView.backgroundColor = ThemeColor.Light.accentColorOne
             selectedBackgroundView = backgroundView
-            entryTextField.isUserInteractionEnabled = false
-            entryTextField.textColor = ThemeColor.Light.primaryColor
-            underlineView.isHidden = true
+            entryCellLabel.textColor = ThemeColor.Light.primaryColor
         }
     }
 }
