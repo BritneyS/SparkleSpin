@@ -57,7 +57,22 @@ class PlayerViewController: UIViewController {
         playerEntryTextField.text? = ""
     }
     
-    func alertForEmptyEntry() {
+    private func updateDoneBarButton() {
+        if doneBarButton?.isEnabled == false {
+            doneBarButton?.isEnabled = true
+        }
+    }
+    
+    private func insertNewPlayerRowInTable() {
+        playerTableView.beginUpdates()
+        let nextRowIndexPath = IndexPath(row: playerViewModel.items.count - 1, section: 0)
+        let nextCell = playerTableView.cellForRow(at: nextRowIndexPath) as? EntryCell
+        playerTableView.insertRows(at: [nextRowIndexPath], with: .bottom)
+        nextCell?.setCellStateWith(state: .saved)
+        playerTableView.endUpdates()
+    }
+    
+    private func alertForEmptyEntry() {
         let emptyEntryAlert = UIAlertController(title: "Oops!", message: "Entry cannot be blank!", preferredStyle: .alert)
         emptyEntryAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(emptyEntryAlert, animated: true)
@@ -68,17 +83,8 @@ class PlayerViewController: UIViewController {
         guard let playerEntryText = playerEntryTextField.text else { return }
         if !playerEntryText.isEmpty {
             addPlayerToList()
-            
-            if doneBarButton?.isEnabled == false {
-                doneBarButton?.isEnabled = true
-            }
-            
-            playerTableView.beginUpdates()
-            let nextRowIndexPath = IndexPath(row: playerViewModel.items.count - 1, section: 0)
-            let nextCell = playerTableView.cellForRow(at: nextRowIndexPath) as? EntryCell
-            playerTableView.insertRows(at: [nextRowIndexPath], with: .bottom)
-            nextCell?.setCellStateWith(state: .saved)
-            playerTableView.endUpdates()
+            updateDoneBarButton()
+            insertNewPlayerRowInTable()
         } else {
             alertForEmptyEntry()
         }
