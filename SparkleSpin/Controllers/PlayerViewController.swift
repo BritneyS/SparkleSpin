@@ -11,13 +11,11 @@ import UIKit
 class PlayerViewController: UIViewController {
     
     @IBOutlet weak var playerTableView: UITableView!
-    let playerViewModel = PlayerViewModel()
-    
     @IBOutlet weak var playerEntryTextField: CustomTextField!
-    
     @IBOutlet weak var addPlayerButton: LightButton! 
     
-
+    let playerViewModel = PlayerViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBarTitle()
