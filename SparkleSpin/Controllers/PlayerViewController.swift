@@ -38,7 +38,6 @@ class PlayerViewController: UIViewController {
         playerTableView.rowHeight = UITableView.automaticDimension
         playerTableView.estimatedRowHeight = CGFloat(Constants.estimatedRowHeight)
         playerTableView.tableFooterView = UIView()
-        playerTableView.allowsMultipleSelection = true
     }
     
     private func addDoneBarButtonItem() {
@@ -51,15 +50,26 @@ class PlayerViewController: UIViewController {
         playerTableView.register(entryCell, forCellReuseIdentifier: CellID.entryCell)
     }
     
-    @objc private func addPlayer() {
-        let currentIndexPath = IndexPath(row: playerViewModel.items.count - 1, section: 0)
-        let currentCell = playerTableView.cellForRow(at: currentIndexPath) as? EntryCell
-        let nameEntry = currentCell?.entryTextField.text ?? ""
-        var playerToAdd = playerViewModel.createPlayerWith(name: nameEntry)
-        playerViewModel.addPlayerToSavedList(player: &playerToAdd)
+    private func addPlayer() {
+        
         
     }
-
+    
+    @IBAction func userTappedAddButton(_ sender: LightButton) {
+        addPlayerButton.animateButton()
+        
+        let nameEntry = playerEntryTextField.text ?? ""
+        var playerToAdd = playerViewModel.createPlayerWith(name: nameEntry)
+        playerViewModel.addPlayerToSavedList(player: &playerToAdd)
+        playerEntryTextField.text? = ""
+        
+        playerTableView.beginUpdates()
+        let nextRowIndexPath = IndexPath(row: playerViewModel.items.count - 1, section: 0)
+        let nextCell = playerTableView.cellForRow(at: nextRowIndexPath) as? EntryCell
+        playerTableView.insertRows(at: [nextRowIndexPath], with: .bottom)
+        nextCell?.setCellStateWith(state: .saved)
+        playerTableView.endUpdates()
+    }
 }
 
 extension PlayerViewController: UITableViewDelegate {

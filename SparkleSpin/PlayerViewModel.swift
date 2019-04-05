@@ -41,7 +41,7 @@ class PlayerViewModel: NSObject {
 //    override init() {
 //        items = nameArray.map { PlayerViewModelItem(player: $0) }
 //    }
-    var savedItems = [PlayerModel]()
+    //var savedItems = [PlayerModel]()
     override init() {
         items = nameArray.map { $0 }
     }
@@ -52,7 +52,7 @@ class PlayerViewModel: NSObject {
     
     func addPlayerToSavedList(player: inout PlayerModel) {
         player.isSaved = true
-        savedItems.append(player)
+        items.append(player)
     }
 }
 

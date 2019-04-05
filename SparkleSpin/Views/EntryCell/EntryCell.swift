@@ -25,7 +25,6 @@ class EntryCell: UITableViewCell {
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
-        if self.isSelected == selected { return }
         super.setSelected(selected, animated: animated)
         
         if selected {
@@ -41,7 +40,6 @@ class EntryCell: UITableViewCell {
         case .saved:
             entryCellLabel.textColor = ThemeColor.Light.accentColorOne
         case .selected:
-            accessoryType = .checkmark
             let backgroundView = UIView()
             backgroundView.backgroundColor = ThemeColor.Light.accentColorOne
             selectedBackgroundView = backgroundView

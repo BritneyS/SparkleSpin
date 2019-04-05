@@ -93,6 +93,9 @@
                                         <state key="normal" title="+">
                                             <color key="titleColor" name="Violet"/>
                                         </state>
+                                        <connections>
+                                            <action selector="userTappedAddButton:" destination="kfy-vz-fa5" eventType="touchUpInside" id="IDB-HQ-Bie"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
