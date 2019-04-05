@@ -99,24 +99,19 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eTF-b3-sOn">
-                                <rect key="frame" x="0.0" y="178" width="375" height="634"/>
-                                <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ae2-XG-8uP">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="634"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </tableView>
-                                </subviews>
-                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ae2-XG-8uP">
+                                <rect key="frame" x="0.0" y="178" width="375" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" name="LightColor"/>
                         <constraints>
-                            <constraint firstItem="eTF-b3-sOn" firstAttribute="top" secondItem="JXC-9E-TP7" secondAttribute="bottom" constant="20" id="9IT-9i-ejO"/>
+                            <constraint firstItem="Ae2-XG-8uP" firstAttribute="top" secondItem="JXC-9E-TP7" secondAttribute="bottom" constant="20" id="17b-8K-uRW"/>
                             <constraint firstItem="fOo-al-RXF" firstAttribute="trailing" secondItem="JXC-9E-TP7" secondAttribute="trailing" constant="20" id="A73-D8-HqY"/>
-                            <constraint firstAttribute="trailing" secondItem="eTF-b3-sOn" secondAttribute="trailing" id="CGG-QT-87Q"/>
                             <constraint firstItem="JXC-9E-TP7" firstAttribute="leading" secondItem="fOo-al-RXF" secondAttribute="leading" constant="20" id="EOR-rQ-eAr"/>
-                            <constraint firstAttribute="bottom" secondItem="eTF-b3-sOn" secondAttribute="bottom" id="eF9-8H-eEI"/>
-                            <constraint firstItem="eTF-b3-sOn" firstAttribute="leading" secondItem="fOo-al-RXF" secondAttribute="leading" id="feu-l6-ewd"/>
+                            <constraint firstItem="Ae2-XG-8uP" firstAttribute="leading" secondItem="fOo-al-RXF" secondAttribute="leading" id="Wm2-eh-gPj"/>
+                            <constraint firstItem="fOo-al-RXF" firstAttribute="trailing" secondItem="Ae2-XG-8uP" secondAttribute="trailing" id="lFT-q2-Wxg"/>
+                            <constraint firstItem="fOo-al-RXF" firstAttribute="bottom" secondItem="Ae2-XG-8uP" secondAttribute="bottom" id="x3a-53-VHM"/>
                             <constraint firstItem="JXC-9E-TP7" firstAttribute="top" secondItem="fOo-al-RXF" secondAttribute="top" constant="20" id="zLg-MW-VY0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fOo-al-RXF"/>

@@ -19,23 +19,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ch7-K8-Dai">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yof-TS-6hA" customClass="CustomCellLabel" customModule="SparkleSpin" customModuleProvider="target">
                         <rect key="frame" x="10" y="10" width="300" height="79.5"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yof-TS-6hA" customClass="CustomCellLabel" customModule="SparkleSpin" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="79.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                    </stackView>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Ch7-K8-Dai" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="8Or-XN-f9H"/>
-                    <constraint firstItem="Ch7-K8-Dai" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="aWu-Vo-4cb"/>
-                    <constraint firstAttribute="trailing" secondItem="Ch7-K8-Dai" secondAttribute="trailing" constant="10" id="cxh-Zz-us9"/>
-                    <constraint firstAttribute="bottom" secondItem="Ch7-K8-Dai" secondAttribute="bottom" constant="10" id="q2s-sb-2O3"/>
+                    <constraint firstItem="yof-TS-6hA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="M4V-mj-QUL"/>
+                    <constraint firstItem="yof-TS-6hA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="cWK-gN-zuA"/>
+                    <constraint firstAttribute="bottom" secondItem="yof-TS-6hA" secondAttribute="bottom" constant="10" id="cq6-90-mMz"/>
+                    <constraint firstAttribute="trailing" secondItem="yof-TS-6hA" secondAttribute="trailing" constant="10" id="j6K-GU-fqf"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
