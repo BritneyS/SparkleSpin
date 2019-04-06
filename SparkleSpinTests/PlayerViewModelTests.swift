@@ -1,5 +1,5 @@
 //
-//  SparkleSpinTests.swift
+//  PlayerViewModelTests.swift
 //  SparkleSpinTests
 //
 //  Created by Britney Smith on 2/18/19.

@@ -27,7 +27,7 @@
 		064A01A0221B3BED001AE3AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064A019E221B3BED001AE3AF /* Main.storyboard */; };
 		064A01A2221B3BEF001AE3AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 064A01A1221B3BEF001AE3AF /* Assets.xcassets */; };
 		064A01A5221B3BEF001AE3AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064A01A3221B3BEF001AE3AF /* LaunchScreen.storyboard */; };
-		064A01B0221B3BEF001AE3AF /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A01AF221B3BEF001AE3AF /* ModelTests.swift */; };
+		064A01B0221B3BEF001AE3AF /* PlayerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A01AF221B3BEF001AE3AF /* PlayerViewModelTests.swift */; };
 		064A01BB221B4CE2001AE3AF /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 064A01BA221B4CE2001AE3AF /* Colors.xcassets */; };
 		064A01BE221B53AD001AE3AF /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A01BD221B53AD001AE3AF /* ThemeColor.swift */; };
 		064A01CA221B5C0E001AE3AF /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A01C9221B5C0E001AE3AF /* Font.swift */; };
@@ -71,7 +71,7 @@
 		064A01A4221B3BEF001AE3AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		064A01A6221B3BEF001AE3AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		064A01AB221B3BEF001AE3AF /* SparkleSpinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SparkleSpinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		064A01AF221B3BEF001AE3AF /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
+		064A01AF221B3BEF001AE3AF /* PlayerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModelTests.swift; sourceTree = "<group>"; };
 		064A01B1221B3BEF001AE3AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		064A01BA221B4CE2001AE3AF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		064A01BD221B53AD001AE3AF /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 		064A01AE221B3BEF001AE3AF /* SparkleSpinTests */ = {
 			isa = PBXGroup;
 			children = (
-				064A01AF221B3BEF001AE3AF /* ModelTests.swift */,
+				064A01AF221B3BEF001AE3AF /* PlayerViewModelTests.swift */,
 				064A01B1221B3BEF001AE3AF /* Info.plist */,
 			);
 			path = SparkleSpinTests;
@@ -358,7 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				064A01B0221B3BEF001AE3AF /* ModelTests.swift in Sources */,
+				064A01B0221B3BEF001AE3AF /* PlayerViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
