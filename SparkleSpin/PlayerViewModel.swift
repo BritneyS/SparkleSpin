@@ -11,32 +11,32 @@ import UIKit
 
 class PlayerViewModel: NSObject {
     
-    var items = [PlayerModel]()
+    var playerList = [PlayerModel]()
 
     func createPlayerWith(name: String) -> PlayerModel {
         return PlayerModel(name: name)
     }
     
     func addPlayerToSavedList(player: inout PlayerModel) {
-        items.append(player)
+        playerList.append(player)
     }
     
     func getPlayerList() -> [PlayerModel] {
-        return items
+        return playerList
     }
 }
 
 extension PlayerViewModel: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return playerList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let entryCell = tableView.dequeueReusableCell(withIdentifier: CellID.entryCell, for: indexPath) as? EntryCell else { fatalError("Fatal error: No cell") }
-        entryCell.item = items[indexPath.row]
+        entryCell.item = playerList[indexPath.row]
         
-        if items[indexPath.row].isSelected {
+        if playerList[indexPath.row].isSelected {
             tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
         } else {
             tableView.deselectRow(at: indexPath, animated: false)
@@ -47,7 +47,7 @@ extension PlayerViewModel: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            items.remove(at: indexPath.row)
+            playerList.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }

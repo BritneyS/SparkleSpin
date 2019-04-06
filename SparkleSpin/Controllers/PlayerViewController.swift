@@ -65,7 +65,7 @@ class PlayerViewController: UIViewController {
     
     private func insertNewPlayerRowInTable() {
         playerTableView.beginUpdates()
-        let nextRowIndexPath = IndexPath(row: playerViewModel.items.count - 1, section: 0)
+        let nextRowIndexPath = IndexPath(row: playerViewModel.playerList.count - 1, section: 0)
         let nextCell = playerTableView.cellForRow(at: nextRowIndexPath) as? EntryCell
         playerTableView.insertRows(at: [nextRowIndexPath], with: .bottom)
         nextCell?.setCellStateWith(state: .saved)
@@ -98,10 +98,10 @@ extension PlayerViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        playerViewModel.items[indexPath.row].isSelected = true
+        playerViewModel.playerList[indexPath.row].isSelected = true
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        playerViewModel.items[indexPath.row].isSelected = false
+        playerViewModel.playerList[indexPath.row].isSelected = false
     }
 }
