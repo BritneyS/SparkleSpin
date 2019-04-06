@@ -20,6 +20,10 @@ class PlayerViewModel: NSObject {
     func addPlayerToSavedList(player: inout PlayerModel) {
         items.append(player)
     }
+    
+    func getPlayerList() -> [PlayerModel] {
+        return items
+    }
 }
 
 extension PlayerViewModel: UITableViewDataSource {
