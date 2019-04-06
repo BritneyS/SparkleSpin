@@ -65,24 +65,5 @@ class ModelTests: XCTestCase {
         // then
         let playerList = playerViewModel.playerList
         XCTAssertEqual(playerList.map { $0.name }, ["Kevin", "Lisa"])
-        
-    }
-    
-    func testGetPlayerList() {
-        // given
-        let playerViewModel = PlayerViewModel()
-        let nameOne = "Kevin"
-        let nameTwo = "Lisa"
-        var playerOne = playerViewModel.createPlayerWith(name: nameOne)
-        playerViewModel.addPlayerToSavedList(player: &playerOne)
-        
-        var playerTwo = playerViewModel.createPlayerWith(name: nameTwo)
-        playerViewModel.addPlayerToSavedList(player: &playerTwo)
-        
-        // when
-        let totalPlayerList = playerViewModel.getPlayerList()
-        
-        // then
-        XCTAssertEqual(totalPlayerList.map { $0.name }, ["Kevin", "Lisa"])
     }
 }
