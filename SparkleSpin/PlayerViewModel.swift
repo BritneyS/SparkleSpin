@@ -18,7 +18,6 @@ class PlayerViewModel: NSObject {
     }
     
     func addPlayerToSavedList(player: inout PlayerModel) {
-        player.isSaved = true
         items.append(player)
     }
 }
