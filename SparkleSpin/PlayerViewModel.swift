@@ -12,12 +12,9 @@ import UIKit
 class PlayerViewModel: NSObject {
     
     var playerList = [PlayerModel]()
-
-    func createPlayerWith(name: String) -> PlayerModel {
-        return PlayerModel(name: name)
-    }
     
-    func addPlayerToSavedList(player: PlayerModel) {
+    func savePlayerEntry(name: String) {
+        let player = PlayerModel(name: name)
         playerList.append(player)
     }
 }

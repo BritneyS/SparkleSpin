@@ -11,40 +11,13 @@ import XCTest
 
 class ModelTests: XCTestCase {
     
-    func testCreateOnePlayer() {
-        // given
-        let playerViewModel = PlayerViewModel()
-        let name = "Kevin"
-
-        // when
-        let playerOne = playerViewModel.createPlayerWith(name: name)
-
-        // then
-        XCTAssertEqual(playerOne.name, "Kevin")
-    }
-    
-    func testCreateTwoPlayers() {
-        // given
-        let playerViewModel = PlayerViewModel()
-        let nameOne = "Kevin"
-        let nameTwo = "Lisa"
-        
-        // when
-        let playerOne = playerViewModel.createPlayerWith(name: nameOne)
-        let playerTwo = playerViewModel.createPlayerWith(name: nameTwo)
-        
-        // then
-        XCTAssertEqual([playerOne.name, playerTwo.name], ["Kevin", "Lisa"])
-    }
-    
     func testAddOnePlayerToPlayerList() {
         // given
         let playerViewModel = PlayerViewModel()
         let name = "Kevin"
-        let playerOne = playerViewModel.createPlayerWith(name: name)
         
         // when
-        playerViewModel.addPlayerToSavedList(player: playerOne)
+        playerViewModel.savePlayerEntry(name: name)
         
         // then
         XCTAssertEqual(playerViewModel.playerList.first?.name, "Kevin")
@@ -55,12 +28,10 @@ class ModelTests: XCTestCase {
         let playerViewModel = PlayerViewModel()
         let nameOne = "Kevin"
         let nameTwo = "Lisa"
-        let playerOne = playerViewModel.createPlayerWith(name: nameOne)
-        playerViewModel.addPlayerToSavedList(player: playerOne)
+        playerViewModel.savePlayerEntry(name: nameOne)
         
         // when
-        let playerTwo = playerViewModel.createPlayerWith(name: nameTwo)
-        playerViewModel.addPlayerToSavedList(player: playerTwo)
+        playerViewModel.savePlayerEntry(name: nameTwo)
         
         // then
         let playerList = playerViewModel.playerList
