@@ -10,18 +10,16 @@ import Foundation
 
 struct PlayerModel {
     var name: String?
-    var uuid: String?
     var isSelected = false
     
     init(name: String?) {
         self.name = name
-        self.uuid = UUID().uuidString
     }
 }
 
 extension PlayerModel: Equatable {
     static func == (lhs: PlayerModel, rhs: PlayerModel) -> Bool {
-        return lhs.name == rhs.name && lhs.uuid == rhs.uuid
+        return lhs.name == rhs.name
     }
 }
 

@@ -17,7 +17,7 @@ class PlayerViewModel: NSObject {
         return PlayerModel(name: name)
     }
     
-    func addPlayerToSavedList(player: inout PlayerModel) {
+    func addPlayerToSavedList(player: PlayerModel) {
         playerList.append(player)
     }
 }

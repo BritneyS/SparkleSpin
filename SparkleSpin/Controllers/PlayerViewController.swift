@@ -52,8 +52,8 @@ class PlayerViewController: UIViewController {
     
     private func addPlayerToList() {
         let nameEntry = playerEntryTextField.text ?? ""
-        var playerToAdd = playerViewModel.createPlayerWith(name: nameEntry)
-        playerViewModel.addPlayerToSavedList(player: &playerToAdd)
+        let playerToAdd = playerViewModel.createPlayerWith(name: nameEntry)
+        playerViewModel.addPlayerToSavedList(player: playerToAdd)
         playerEntryTextField.text? = ""
     }
     
