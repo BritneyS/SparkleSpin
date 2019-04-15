@@ -81,7 +81,7 @@ class PlayerViewController: UIViewController {
     @IBAction func userTappedAddButton(_ sender: LightButton) {
         addPlayerButton.animateButton()
         guard let playerEntryText = playerEntryTextField.text else { return }
-        if !playerEntryText.isEmpty {
+        if !playerEntryText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             addPlayerToList()
             updateDoneBarButton()
             insertNewPlayerRowInTable()
