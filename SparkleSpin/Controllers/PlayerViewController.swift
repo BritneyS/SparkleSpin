@@ -65,9 +65,7 @@ class PlayerViewController: UIViewController {
     private func insertNewPlayerRowInTable() {
         playerTableView.beginUpdates()
         let nextRowIndexPath = IndexPath(row: playerViewModel.playerList.count - 1, section: 0)
-        let nextCell = playerTableView.cellForRow(at: nextRowIndexPath) as? EntryCell
         playerTableView.insertRows(at: [nextRowIndexPath], with: .bottom)
-        nextCell?.setCellStateWith(state: .saved)
         playerTableView.endUpdates()
     }
     
