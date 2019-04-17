@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,49 +19,24 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ch7-K8-Dai">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yof-TS-6hA" customClass="CustomCellLabel" customModule="SparkleSpin" customModuleProvider="target">
                         <rect key="frame" x="10" y="10" width="300" height="79.5"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wQ6-ib-Aln">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="79.5"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Ve-R2-0zQ" customClass="CustomTextField" customModule="SparkleSpin" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="77.5"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uNh-YA-1XA">
-                                        <rect key="frame" x="0.0" y="77.5" width="300" height="2"/>
-                                        <color key="backgroundColor" name="Violet"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="2" id="x7c-Nj-D7F"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="wQ6-ib-Aln" firstAttribute="top" secondItem="Ch7-K8-Dai" secondAttribute="top" id="Cw8-hd-0KS"/>
-                            <constraint firstAttribute="bottom" secondItem="wQ6-ib-Aln" secondAttribute="bottom" id="PVA-0U-aeW"/>
-                            <constraint firstAttribute="trailing" secondItem="wQ6-ib-Aln" secondAttribute="trailing" id="dTi-bf-0sL"/>
-                            <constraint firstItem="wQ6-ib-Aln" firstAttribute="leading" secondItem="Ch7-K8-Dai" secondAttribute="leading" id="lDQ-r4-61k"/>
-                        </constraints>
-                    </stackView>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Ch7-K8-Dai" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="8Or-XN-f9H"/>
-                    <constraint firstItem="Ch7-K8-Dai" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="aWu-Vo-4cb"/>
-                    <constraint firstAttribute="trailing" secondItem="Ch7-K8-Dai" secondAttribute="trailing" constant="10" id="cxh-Zz-us9"/>
-                    <constraint firstAttribute="bottom" secondItem="Ch7-K8-Dai" secondAttribute="bottom" constant="10" id="q2s-sb-2O3"/>
+                    <constraint firstItem="yof-TS-6hA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="M4V-mj-QUL"/>
+                    <constraint firstItem="yof-TS-6hA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="cWK-gN-zuA"/>
+                    <constraint firstAttribute="bottom" secondItem="yof-TS-6hA" secondAttribute="bottom" constant="10" id="cq6-90-mMz"/>
+                    <constraint firstAttribute="trailing" secondItem="yof-TS-6hA" secondAttribute="trailing" constant="10" id="j6K-GU-fqf"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="entryCellLabel" destination="yof-TS-6hA" id="6SR-NR-8go"/>
+            </connections>
         </tableViewCell>
     </objects>
-    <resources>
-        <namedColor name="Violet">
-            <color red="0.38823529411764707" green="0.047058823529411764" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-    </resources>
 </document>

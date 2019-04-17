@@ -8,10 +8,18 @@
 
 import Foundation
 
-class PlayerModel {
+struct PlayerModel {
     var name: String?
+    var isSelected = false
     
     init(name: String?) {
         self.name = name
     }
 }
+
+extension PlayerModel: Equatable {
+    static func == (lhs: PlayerModel, rhs: PlayerModel) -> Bool {
+        return lhs.name == rhs.name
+    }
+}
+

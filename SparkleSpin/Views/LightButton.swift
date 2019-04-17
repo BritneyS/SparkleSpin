@@ -28,7 +28,7 @@ class LightButton: UIButton {
                 isHighlighted = false
                 self.setTitleColor(ThemeColor.Light.accentColorTwo, for: .normal)
             } else {
-                self.setTitleColor(ThemeColor.Light.secondaryColor, for: .normal)
+                self.setTitleColor(ThemeColor.Light.accentColorOne, for: .normal)
             }
             
         }

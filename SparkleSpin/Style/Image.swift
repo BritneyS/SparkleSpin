@@ -8,8 +8,8 @@
 
 import UIKit
 
-struct Image {
-    struct icon {
+enum Image {
+    enum icon {
         static let homeIcon = UIImage(named: "icons8-home-50")
         static let exitIcon = UIImage(named: "icons8-exit-50")
     }
