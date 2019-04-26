@@ -11,7 +11,7 @@ import UIKit
 
 class PlayerViewModel: NSObject {
     
-    var playerList = [PlayerModel]()
+    @objc dynamic var playerList = [PlayerModel]()
     
     func savePlayerEntry(name: String) {
         let player = PlayerModel(name: name)

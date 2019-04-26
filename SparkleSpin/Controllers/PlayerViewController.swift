@@ -14,8 +14,9 @@ class PlayerViewController: UIViewController {
     @IBOutlet weak var playerEntryTextField: CustomTextField!
     @IBOutlet weak var addPlayerButton: LightButton! 
     
-    let playerViewModel = PlayerViewModel()
+    @objc let playerViewModel = PlayerViewModel()
     var doneBarButton: UIBarButtonItem?
+    var playerViewModelObservationToken: NSKeyValueObservation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,18 @@ class PlayerViewController: UIViewController {
         registerNib()
         setupTableView()
         addDoneBarButtonItem()
+        playerViewModelObservationToken = observe(\.playerViewModel.playerList, options: [.new], changeHandler: { [unowned self](vc, change) in
+            if change.newValue!.isEmpty {
+                vc.doneBarButton?.isEnabled = false
+            }
+        })
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        // Invalidate observation tokens to stop observing
+        playerViewModelObservationToken?.invalidate()
     }
     
     private func setNavigationBarTitle() {
