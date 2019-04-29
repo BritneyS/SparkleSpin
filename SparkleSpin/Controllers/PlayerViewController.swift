@@ -24,11 +24,7 @@ class PlayerViewController: UIViewController {
         registerNib()
         setupTableView()
         addDoneBarButtonItem()
-        playerViewModelObservationToken = observe(\.playerViewModel.playerList, options: [.new], changeHandler: { [unowned self](vc, change) in
-            if change.newValue!.isEmpty {
-                self.doneBarButton?.isEnabled = false
-            }
-        })
+        setObservationToken()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -40,6 +36,14 @@ class PlayerViewController: UIViewController {
     
     private func setNavigationBarTitle() {
         navigationItem.title = "Add Players!"
+    }
+    
+    private func setObservationToken() {
+        playerViewModelObservationToken = observe(\.playerViewModel.playerList, options: [.new], changeHandler: { [unowned self](vc, change) in
+            if change.newValue!.isEmpty {
+                self.doneBarButton?.isEnabled = false
+            }
+        })
     }
     
     private func addDoneBarButtonItem() {
