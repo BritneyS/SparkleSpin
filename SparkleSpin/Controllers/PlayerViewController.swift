@@ -34,6 +34,22 @@ class PlayerViewController: UIViewController {
         playerViewModelObservationToken?.invalidate()
     }
     
+    @IBAction func userTappedAddButton(_ sender: LightButton) {
+        addPlayerButton.animateButton()
+        guard let playerEntryText = playerEntryTextField.text else { return }
+        if !playerEntryText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            addPlayerToList()
+            updateDoneBarButton()
+            insertNewPlayerRowInTable()
+        } else {
+            alertForEmptyEntry()
+        }
+    }
+}
+
+// MARK: Private Methods
+extension PlayerViewController {
+    
     private func setNavigationBarTitle() {
         navigationItem.title = "Add Players!"
     }
@@ -90,18 +106,6 @@ class PlayerViewController: UIViewController {
         let emptyEntryAlert = UIAlertController(title: "Oops!", message: "Entry cannot be blank!", preferredStyle: .alert)
         emptyEntryAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(emptyEntryAlert, animated: true)
-    }
-    
-    @IBAction func userTappedAddButton(_ sender: LightButton) {
-        addPlayerButton.animateButton()
-        guard let playerEntryText = playerEntryTextField.text else { return }
-        if !playerEntryText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            addPlayerToList()
-            updateDoneBarButton()
-            insertNewPlayerRowInTable()
-        } else {
-            alertForEmptyEntry()
-        }
     }
 }
 
