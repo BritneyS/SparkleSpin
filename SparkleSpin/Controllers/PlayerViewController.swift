@@ -26,7 +26,7 @@ class PlayerViewController: UIViewController {
         addDoneBarButtonItem()
         playerViewModelObservationToken = observe(\.playerViewModel.playerList, options: [.new], changeHandler: { [unowned self](vc, change) in
             if change.newValue!.isEmpty {
-                vc.doneBarButton?.isEnabled = false
+                self.doneBarButton?.isEnabled = false
             }
         })
     }
