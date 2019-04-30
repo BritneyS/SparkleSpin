@@ -14,7 +14,8 @@ class PlayerViewModel: NSObject {
     var playerList = [PlayerModel]()
     
     func savePlayerEntry(name: String) {
-        let player = PlayerModel(name: name)
+        let trimmedString = name.trimmingCharacters(in: .whitespacesAndNewlines)
+        let player = PlayerModel(name: trimmedString)
         playerList.append(player)
     }
 }
