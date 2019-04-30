@@ -6,8 +6,11 @@
 //  Copyright © 2019 Britney Smith. All rights reserved.
 //
 
-class ChoreModel {
+import Foundation
+
+class ChoreModel: NSObject {
     var choreName: String?
+    var isSelected = false
     
     init(choreName: String?) {
         self.choreName = choreName
