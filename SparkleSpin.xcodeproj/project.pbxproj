@@ -16,6 +16,7 @@
 		0601DE2B223EAF2400CFBDE3 /* EntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0601DE29223EAF2400CFBDE3 /* EntryCell.xib */; };
 		0601DE2D22402C0F00CFBDE3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0601DE2C22402C0F00CFBDE3 /* Constants.swift */; };
 		0601DE2F2242913500CFBDE3 /* PlayerListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0601DE2E2242913500CFBDE3 /* PlayerListModel.swift */; };
+		060B999A2279D2FE00D3F23C /* ChoreViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060B99992279D2FE00D3F23C /* ChoreViewModelTests.swift */; };
 		060C4D11221F425600B0BB07 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 060C4D10221F425600B0BB07 /* Images.xcassets */; };
 		060C4D13222047AC00B0BB07 /* JUICE_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 060C4D12222047AC00B0BB07 /* JUICE_Regular.ttf */; };
 		060C4D15222047BA00B0BB07 /* Library 3 am.otf in Resources */ = {isa = PBXBuildFile; fileRef = 060C4D14222047BA00B0BB07 /* Library 3 am.otf */; };
@@ -57,6 +58,7 @@
 		0601DE29223EAF2400CFBDE3 /* EntryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryCell.xib; sourceTree = "<group>"; };
 		0601DE2C22402C0F00CFBDE3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0601DE2E2242913500CFBDE3 /* PlayerListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListModel.swift; sourceTree = "<group>"; };
+		060B99992279D2FE00D3F23C /* ChoreViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreViewModelTests.swift; sourceTree = "<group>"; };
 		060C4D10221F425600B0BB07 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		060C4D12222047AC00B0BB07 /* JUICE_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JUICE_Regular.ttf; sourceTree = "<group>"; };
 		060C4D14222047BA00B0BB07 /* Library 3 am.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Library 3 am.otf"; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				064A01AF221B3BEF001AE3AF /* ModelTests.swift */,
+				060B99992279D2FE00D3F23C /* ChoreViewModelTests.swift */,
 				064A01B1221B3BEF001AE3AF /* Info.plist */,
 			);
 			path = SparkleSpinTests;
@@ -358,6 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				060B999A2279D2FE00D3F23C /* ChoreViewModelTests.swift in Sources */,
 				064A01B0221B3BEF001AE3AF /* ModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
