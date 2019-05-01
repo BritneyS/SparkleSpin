@@ -13,7 +13,7 @@ class ChoreViewModel: NSObject {
     var choreList = [ChoreModel]()
     
     func saveChoreEntry(name: String) {
-        let trimmedString = name.trimmingCharacters(in: .whitespacesAndNewlines)
+        let trimmedString = name.trimmingCharacters(in: .whitespaces)
         let chore = ChoreModel(choreName: trimmedString)
         choreList.append(chore)
     }

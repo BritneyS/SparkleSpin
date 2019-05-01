@@ -50,22 +50,4 @@ class ChoreViewModelTests: XCTestCase {
         XCTAssertEqual(choreViewModel.choreList.first?.choreName, "Wash dishes")
         
     }
-    
-    func testAddChoreWithNewLineBeforeAndAfter() {
-        // given
-        let choreViewModel = ChoreViewModel()
-        let name = """
-
-        Wash dishes
-
-        """
-        
-        // when
-        choreViewModel.saveChoreEntry(name: name)
-        
-        // then
-        XCTAssertEqual(choreViewModel.choreList.first?.choreName, "Wash dishes")
-    }
-    
-
 }
