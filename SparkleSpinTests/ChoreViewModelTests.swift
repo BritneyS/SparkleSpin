@@ -37,5 +37,18 @@ class ChoreViewModelTests: XCTestCase {
         let choreList = choreViewModel.choreList
         XCTAssertEqual(choreList.map { $0.choreName }, ["Wash dishes", "Do laundry"])
     }
+    
+    func testAddChoreWithLeadingAndTrailingWhiteSpace() {
+        // given
+        let choreViewModel = ChoreViewModel()
+        let name = "   Wash dishes    "
+        
+        // when
+        choreViewModel.saveChoreEntry(name: name)
+        
+        // then
+        XCTAssertEqual(choreViewModel.choreList.first?.choreName, "Wash dishes")
+        
+    }
 
 }
