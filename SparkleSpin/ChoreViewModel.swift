@@ -6,16 +6,15 @@
 //  Copyright © 2019 Britney Smith. All rights reserved.
 //
 
-class ChoreViewModel {
+import Foundation
+
+class ChoreViewModel: NSObject {
     
-    private let choreModel: ChoreModel
-    var choreNameString: String? = nil
+    var choreList = [ChoreModel]()
     
-    init(choreModel: ChoreModel) {
-        self.choreModel = choreModel
-    }
-    
-    func updateProperties(choreNameString: String) {
-        choreModel.choreName = choreNameString
+    func saveChoreEntry(name: String) {
+        let trimmedString = name.trimmingCharacters(in: .whitespaces)
+        let chore = ChoreModel(choreName: trimmedString)
+        choreList.append(chore)
     }
 }
