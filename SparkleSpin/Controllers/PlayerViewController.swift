@@ -24,6 +24,10 @@ class PlayerViewController: UIViewController {
         registerNib()
         setupTableView()
         addDoneBarButtonItem()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         setObservationToken()
     }
     
