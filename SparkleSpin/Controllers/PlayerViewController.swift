@@ -14,8 +14,9 @@ class PlayerViewController: UIViewController {
     @IBOutlet weak var playerEntryTextField: CustomTextField!
     @IBOutlet weak var addPlayerButton: LightButton! 
     
-    let playerViewModel = PlayerViewModel()
+    @objc let playerViewModel = PlayerViewModel()
     var doneBarButton: UIBarButtonItem?
+    var playerViewModelObservationToken: NSKeyValueObservation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +26,44 @@ class PlayerViewController: UIViewController {
         addDoneBarButtonItem()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setObservationToken()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        // Invalidate observation tokens to stop observing
+        playerViewModelObservationToken?.invalidate()
+    }
+    
+    @IBAction func userTappedAddButton(_ sender: LightButton) {
+        addPlayerButton.animateButton()
+        guard let playerEntryText = playerEntryTextField.text else { return }
+        if !playerEntryText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            addPlayerToList()
+            updateDoneBarButton()
+            insertNewPlayerRowInTable()
+        } else {
+            alertForEmptyEntry()
+        }
+    }
+}
+
+// MARK: Private Methods
+extension PlayerViewController {
+    
     private func setNavigationBarTitle() {
         navigationItem.title = "Add Players!"
+    }
+    
+    private func setObservationToken() {
+        playerViewModelObservationToken = observe(\.playerViewModel.playerList, options: [.new], changeHandler: { [unowned self](vc, change) in
+            if change.newValue!.isEmpty {
+                self.doneBarButton?.isEnabled = false
+            }
+        })
     }
     
     private func addDoneBarButtonItem() {
@@ -73,18 +110,6 @@ class PlayerViewController: UIViewController {
         let emptyEntryAlert = UIAlertController(title: "Oops!", message: "Entry cannot be blank!", preferredStyle: .alert)
         emptyEntryAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(emptyEntryAlert, animated: true)
-    }
-    
-    @IBAction func userTappedAddButton(_ sender: LightButton) {
-        addPlayerButton.animateButton()
-        guard let playerEntryText = playerEntryTextField.text else { return }
-        if !playerEntryText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            addPlayerToList()
-            updateDoneBarButton()
-            insertNewPlayerRowInTable()
-        } else {
-            alertForEmptyEntry()
-        }
     }
 }
 
